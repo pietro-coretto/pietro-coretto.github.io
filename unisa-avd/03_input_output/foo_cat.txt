@@ -1,0 +1,2 @@
+Paese = Italia
+Media del reddito = 1800euro

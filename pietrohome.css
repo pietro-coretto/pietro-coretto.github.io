@@ -1,0 +1,254 @@
+/*  simple Body */
+body{ font-size: 16px;
+      color: black;
+      font-family: "Times New Roman", Times, serif;
+      background-color: #F1F0EC; /* #F5F5F5; */
+      width: 800px;     
+      margin-left:  35px; 
+      margin-right: auto; 
+      margin-top:   20px; 
+      margin-bottom: auto; 
+}
+
+
+
+/* LINKS */
+ a:link {color: blue; text-decoration: none;}
+ a:hover {color: #CC0000;}
+ a:visited {color: blue; text-decoration: none;}
+ a:visited:hover { color: #CC0000; text-decoration: none;}
+ a:active { color: #CC0000; }
+
+
+
+
+
+/* Preformatted text */
+pre{
+  font-size: 100%;
+  display: block;
+  font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+  white-space: pre;
+  margin: 0em 0em;
+}
+
+
+
+
+
+
+/*   Headers  */
+
+h1{
+  display: block;
+  font-size: 200%;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+
+.h1Style{
+  font-size: 200%;
+  font-weight: bold;
+}
+
+
+h2{
+  display: block;
+  font-size: 150%;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+
+.h2Style{
+  font-size: 150%;
+  font-weight: bold;
+}
+
+
+h3{
+  display: block;
+  font-size: 130%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.h3Style{
+  font-size: 130%;
+  font-weight: bold;
+}
+
+
+
+
+h4{
+  display: block;
+  font-size: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.h4Style{
+  font-size: 100%;
+  font-weight: bold;
+}
+
+
+
+
+
+
+/* Relative font size */
+.fondo{ font-size: 0.8%}
+
+.Font150{font-size: 150%;
+   text-decoration: none
+   }
+
+.Font200{font-size: 200%;
+   text-decoration: none
+   }
+
+.Font250{font-size: 250%;
+   text-decoration: none
+   }
+
+.Font300{font-size: 300%;
+   text-decoration: none
+   }
+
+.Font350{font-size: 350%;
+   text-decoration: none
+   }
+
+.Font400{font-size: 400%;
+   text-decoration: none
+   }
+
+
+
+
+/* Colors */
+.MySand{color: #DFE0DA}
+.MyGrey{color: #E5E5E5}
+.GreenAlitalia{color: #006643}
+.RedAlitalia{color: #C4262E}
+.RedFB{color: #CC3333}
+.BlueFB{color:#3B5998 }
+.Orange{color: #DC9D24}
+
+
+
+
+
+
+
+
+/* Replace old blink  */
+/* usage: <span class="blink"><b>News:</b></span> */
+.blink {
+  animation: blink-animation 1s steps(3, start) infinite;
+  -webkit-animation: blink-animation 1s steps(3, start) infinite;
+  color: #CC0000;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+
+/* Table class: description */
+table.description{
+    font-size: 100%;
+    font-family: "Times New Roman", Times, serif;
+    border-collapse: separate;
+    border-spacing: 0 0.1ex;
+}
+
+table.description td {
+    padding: 0.1ex 0;
+    font-weight: bold;
+}
+
+
+/* Ordered List: page table of  contents */
+ol.contents {
+    display: block;
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin-top:    1em;
+    margin-bottom: 1em;
+    margin-left:   0;
+    margin-right:  0;
+    padding-left:  0em;
+}
+
+
+/* Ordered List*/
+ol {
+    display: block;
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin-top:    1em;
+    margin-bottom: 1em;
+    margin-left:   0;
+    margin-right:  0;
+    padding-left:  2em;
+}
+
+/* Ordered List: lower level  */
+ol.blevel {
+    display: block;
+    list-style-type: lower-alpha;
+    list-style-position: outside;
+    margin-top:    0em;
+    margin-bottom: 0em;
+    margin-left:   0;
+    margin-right:  0;
+    padding-left:  0.75em;
+}
+
+
+/* Unordered List: lower level */
+ul {
+    display: block;
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-top:    1em;
+    margin-bottom: 1em;
+    margin-left:   0;
+    margin-right:  0;
+    padding-left:  2em;
+}
+
+
+/* Unordered List: lower level */
+ul.blevel {
+    display: block;
+    list-style-type: "- ";
+    list-style-position: outside;
+    margin-top:    0em;
+    margin-bottom: 0em;
+    margin-left:   0;
+    margin-right:  0;
+    padding-left:  0.75em;
+}
