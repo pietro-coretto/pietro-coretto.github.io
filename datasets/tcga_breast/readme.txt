@@ -19,7 +19,7 @@ and Coretto et al. (2018).
 * Container:  R data.frame named  'dat'
 
 * Variables / Features
-  dat[,k] = gene expression levels for gene colnames(dat)[i]
+  `dat[,k]` = gene expression levels for gene `colnames(dat)[k]`
   
 
 
