@@ -2,14 +2,15 @@
 
 Data measuring 6 features on 200 Swiss banknotes (the old-Swiss 1000-franc). The banknotes belong to two classes of equal size: genuine and counterfeit.
 
-* Download: [banknote.RData](../../banknote.RData)
+
+
+* Download: [banknote.RData](https://github.com/pietro-coretto/pietro-coretto.github.io/blob/73b8af41f9f8d772876c3e1361fb2007578b04e2/banknote/banknote.RData)
 
 * Container: R data.frame named  'dat'
 
 * Sample size: 200
 
 * Number of variables: 7
-
 
 
 
