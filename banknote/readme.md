@@ -1,4 +1,4 @@
-(DATA SET: Swiss9 [https://github.com/pietro-coretto/pietro-coretto.github.io/blob/main/banknote/banknote.RData]
+(DATA SET: Swiss) [banknote.RData]
 ********************************************************************************
 
 
