@@ -1,5 +1,5 @@
 # Swiss Banknotes 
-********************************************************************************
+
 Data measuring 6 features on 200 Swiss banknotes (the old-Swiss 1000-franc). The banknotes belong to two classes of equal size: genuine and counterfeit.
 
 
