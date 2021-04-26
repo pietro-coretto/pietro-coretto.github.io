@@ -1,9 +1,9 @@
-# [DATA SET: Swiss](banknote.RData)
+# Swiss Banknotes 
 ********************************************************************************
-
-
 Data measuring 6 features on 200 Swiss banknotes (the old-Swiss 1000-franc). The banknotes belong to two classes of equal size: genuine and counterfeit.
 
+
+* [Download banknote.RData](banknote.RData)
 
 * Sample size: 200
 
