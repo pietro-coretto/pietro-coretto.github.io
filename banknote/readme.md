@@ -1,6 +1,7 @@
+(DATA SET: Swiss9 [https://github.com/pietro-coretto/pietro-coretto.github.io/blob/main/banknote/banknote.RData]
 ********************************************************************************
-DATA SET: Swiss 
-********************************************************************************
+
+
 Data measuring 6 features on 200 Swiss banknotes (the old-Swiss 1000-franc). The banknotes belong to two classes of equal size: genuine and counterfeit.
 
 
