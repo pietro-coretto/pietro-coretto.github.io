@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
+
+
 /*  simple Body */
 body{ font-size: 16px;
       color: black;
@@ -11,11 +14,21 @@ body{ font-size: 16px;
       margin-bottom: auto; 
 }
 
+/* contacts table */
 .contacts {
-    font-family: monospace;
+    font-family: 'Cousine';
   font-size:100%; 
 }
 
+
+/* preformatted text */
+pre{
+  font-size: 100%;
+  display: block;
+  font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+  white-space: pre;
+  margin: 0em 0em;
+}
 
 
 /* LINKS */
@@ -27,24 +40,7 @@ body{ font-size: 16px;
 
 
 
-
-
-/* Preformatted text */
-pre{
-  font-size: 100%;
-  display: block;
-  font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
-  white-space: pre;
-  margin: 0em 0em;
-}
-
-
-
-
-
-
 /*   Headers  */
-
 h1{
   display: block;
   font-size: 200%;
