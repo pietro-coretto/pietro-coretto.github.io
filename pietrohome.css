@@ -1,6 +1,5 @@
 /* import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Cousine&display=swap');
 
 
 /*  simple Body */
@@ -17,14 +16,14 @@ body{ font-size: 16px;
 
 /* contacts table */
 .contacts {
-    font-family: 'Cousine';
-  font-size:100%; 
+  font-family: "Cousine";
+  font-size: 1.05em; 
 }
 
 
 /* preformatted text */
 pre{
-  font-size: 100%;
+  font-size: 1em;
   display: block;
   font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
   white-space: pre;
@@ -54,7 +53,7 @@ a:active { color: #C4262E; }
 /* headers */
 h1{
   display: block;
-  font-size: 200%;
+  font-size: 2em;
   margin-top: 0.67em;
   margin-bottom: 0.67em;
   margin-left: 0;
@@ -63,13 +62,13 @@ h1{
 }
 
 .h1Style{
-  font-size: 200%;
+  font-size: 2em;
   font-weight: bold;
 }
 
 h2{
   display: block;
-  font-size: 130%;
+  font-size: 1.5em;
   margin-top: 0.83em;
   margin-bottom: 0.83em;
   margin-left: 0;
@@ -78,13 +77,13 @@ h2{
 }
 
 .h2Style{
-  font-size: 130%;
+  font-size: 1.5em;
   font-weight: bold;
 }
 
 h3{
   display: block;
-  font-size: 110%;
+  font-size: 1.17em;
   margin-top: 1em;
   margin-bottom: 1em;
   margin-left: 0;
@@ -93,13 +92,13 @@ h3{
 }
 
 .h3Style{
-  font-size: 110%;
+  font-size: 1.17em;
   font-weight: bold;
 }
 
 h4{
   display: block;
-  font-size: 100%;
+  font-size: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
   margin-left: 0;
@@ -108,7 +107,7 @@ h4{
 }
 
 .h4Style{
-  font-size: 100%;
+  font-size: 1em;
   font-weight: bold;
 }
 
