@@ -1,7 +1,8 @@
 /*  simple Body */
 body{ font-size: 16px;
       color: black;
-      font-family: "Garamond";  /* "Times New Roman", Times, serif; */
+      font-family: Georgia, Times, serif;
+      /* font-family: "Times New Roman", Times, serif; */
       background-color: #F1F0EC; /* #F5F5F5; */
       width: 800px;     
       margin-left:  35px; 
