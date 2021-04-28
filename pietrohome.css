@@ -10,17 +10,10 @@ body{ font-size: 16px;
       margin-bottom: auto; 
 }
 
-
-table.contacts tr td { 
-    font-size: 100%; 
-    font-family:  monospace;
-}
-
-.tablepress-id-N tbody td {
- font-family: Tahoma;
- font-size: 14px;
- font-weight: bold;
- color: #ff0000;
+.xtmp {
+  font-family:Arial,Verdana,sans-serif;
+  font-size:1em; [color=red]/* Never set font sizes in pixels! */[/color]
+  color:#00f;
 }
 
 
