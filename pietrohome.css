@@ -12,7 +12,7 @@ body{ font-size: 16px;
 }
 
 .contacts {
-    font-family: "Courier New";
+    font-family: monospace;
   font-size:100%; 
 }
 
