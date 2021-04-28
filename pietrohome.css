@@ -1,10 +1,13 @@
+
+/* import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Cousine&display=swap');
 
 
 /*  simple Body */
 body{ font-size: 16px;
       color: black;
-      font-family: Georgia, Times, serif;
+      font-family: "Georgia", serif;
       /* font-family: "Times New Roman", Times, serif; */
       background-color: #F1F0EC; /* #F5F5F5; */
       width: 800px;     
@@ -31,16 +34,26 @@ pre{
 }
 
 
-/* LINKS */
+/* links */
  a:link {color: blue; text-decoration: none;}
- a:hover {color: #CC0000;}
+ a:hover {color: #C4262E;}
  a:visited {color: blue; text-decoration: none;}
- a:visited:hover { color: #CC0000; text-decoration: none;}
- a:active { color: #CC0000; }
+ a:visited:hover { color: #C4262E; text-decoration: none;}
+ a:active { color: #C4262E; }
+
+
+/* Colors */
+.MySand{color: #DFE0DA}
+.MyGrey{color: #E5E5E5}
+.GreenAlitalia{color: #006643}
+.RedAlitalia{color: #C4262E}
+.RedFB{color: #CC3333}
+.BlueFB{color:#3B5998 }
+.Orange{color: #DC9D24}
 
 
 
-/*   Headers  */
+/* headers */
 h1{
   display: block;
   font-size: 200%;
@@ -51,12 +64,10 @@ h1{
   font-weight: bold;
 }
 
-
 .h1Style{
   font-size: 200%;
   font-weight: bold;
 }
-
 
 h2{
   display: block;
@@ -68,12 +79,10 @@ h2{
   font-weight: bold;
 }
 
-
 .h2Style{
   font-size: 130%;
   font-weight: bold;
 }
-
 
 h3{
   display: block;
@@ -89,9 +98,6 @@ h3{
   font-size: 110%;
   font-weight: bold;
 }
-
-
-
 
 h4{
   display: block;
@@ -143,23 +149,7 @@ h4{
 
 
 
-/* Colors */
-.MySand{color: #DFE0DA}
-.MyGrey{color: #E5E5E5}
-.GreenAlitalia{color: #006643}
-.RedAlitalia{color: #C4262E}
-.RedFB{color: #CC3333}
-.BlueFB{color:#3B5998 }
-.Orange{color: #DC9D24}
-
-
-
-
-
-
-
-
-/* Replace old blink  */
+/* blink (old)  */
 /* usage: <span class="blink"><b>News:</b></span> */
 .blink {
   animation: blink-animation 1s steps(3, start) infinite;
@@ -178,10 +168,9 @@ h4{
 }
 
 
-/* Table class: description */
+/* table class: description */
 table.description{
     font-size: 100%;
-    font-family: "Times New Roman", Times, serif;
     border-collapse: separate;
     border-spacing: 0 0.1ex;
 }
@@ -192,7 +181,34 @@ table.description td {
 }
 
 
-/* Ordered List: page table of  contents */
+
+
+/* ordered list*/
+ol {
+    display: block;
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin-top:    1em;
+    margin-bottom: 1em;
+    margin-left:   0;
+    margin-right:  0;
+    padding-left:  2em;
+}
+
+/* ordered list, lower level  */
+ol.blevel {
+    display: block;
+    list-style-type: lower-alpha;
+    list-style-position: outside;
+    margin-top:    0em;
+    margin-bottom: 0em;
+    margin-left:   0;
+    margin-right:  0;
+    padding-left:  0.75em;
+}
+
+ 
+/* ordered list for page contents */
 ol.contents {
     display: block;
     list-style-type: decimal;
@@ -205,32 +221,7 @@ ol.contents {
 }
 
 
-/* Ordered List*/
-ol {
-    display: block;
-    list-style-type: decimal;
-    list-style-position: outside;
-    margin-top:    1em;
-    margin-bottom: 1em;
-    margin-left:   0;
-    margin-right:  0;
-    padding-left:  2em;
-}
-
-/* Ordered List: lower level  */
-ol.blevel {
-    display: block;
-    list-style-type: lower-alpha;
-    list-style-position: outside;
-    margin-top:    0em;
-    margin-bottom: 0em;
-    margin-left:   0;
-    margin-right:  0;
-    padding-left:  0.75em;
-}
-
-
-/* Unordered List: lower level */
+/* unordered list */
 ul {
     display: block;
     list-style-type: disc;
@@ -243,7 +234,7 @@ ul {
 }
 
 
-/* Unordered List: lower level */
+/* unordered list, lower level */
 ul.blevel {
     display: block;
     list-style-type: "- ";
@@ -254,3 +245,4 @@ ul.blevel {
     margin-right:  0;
     padding-left:  0.75em;
 }
+
