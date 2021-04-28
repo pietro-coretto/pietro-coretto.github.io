@@ -1,7 +1,7 @@
 /*  simple Body */
 body{ font-size: 16px;
       color: black;
-      font-family: "Times New Roman", Times, serif;
+      font-family: "Garamond";  /* "Times New Roman", Times, serif; */
       background-color: #F1F0EC; /* #F5F5F5; */
       width: 800px;     
       margin-left:  35px; 
@@ -10,8 +10,8 @@ body{ font-size: 16px;
       margin-bottom: auto; 
 }
 
-.xtmp {
-  font-family: "Courier New", monospace;
+.contacts {
+    font-family: "Courier New";
   font-size:100%; 
 }
 
