@@ -11,6 +11,11 @@ body{ font-size: 16px;
 }
 
 
+table.contacts tr td { 
+    font-size: 100%; 
+    font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+}
+
 
 /* LINKS */
  a:link {color: blue; text-decoration: none;}
@@ -58,7 +63,7 @@ h1{
 
 h2{
   display: block;
-  font-size: 150%;
+  font-size: 130%;
   margin-top: 0.83em;
   margin-bottom: 0.83em;
   margin-left: 0;
@@ -68,14 +73,14 @@ h2{
 
 
 .h2Style{
-  font-size: 150%;
+  font-size: 130%;
   font-weight: bold;
 }
 
 
 h3{
   display: block;
-  font-size: 130%;
+  font-size: 110%;
   margin-top: 1em;
   margin-bottom: 1em;
   margin-left: 0;
@@ -84,7 +89,7 @@ h3{
 }
 
 .h3Style{
-  font-size: 130%;
+  font-size: 110%;
   font-weight: bold;
 }
 
