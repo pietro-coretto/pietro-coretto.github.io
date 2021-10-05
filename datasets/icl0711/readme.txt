@@ -11,7 +11,6 @@ Sample size: 42542
 
 Number of variables: 115
 
-Variables Description: 
-    http://www.decg.it/pcoretto/datasets/lcl_2007_2011_vars_desc_README.pdf
+Variables Description:  see file var_desc.pdf 
 
 
