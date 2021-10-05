@@ -1,6 +1,9 @@
-*.sh
-*.xcf
+## ignore these files everywhere 
+**/*.sh
+**/.#*
+**/*.xcf
+**/*.tex
+
+## ignore dirs 
 bak
 bak/*
-datasets
-datasets/*
