@@ -1,5 +1,6 @@
 ## ignore these files everywhere 
 **/*.sh
+**/x_*
 **/.#*
 **/*.xcf
 **/*.tex
