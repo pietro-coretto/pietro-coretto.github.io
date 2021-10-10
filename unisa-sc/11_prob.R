@@ -316,120 +316,31 @@ c(mu - qz * stdeu ,  mu + qz * stdeu)
 
 
 
-## Approssimazione Monte Carlo delle probabilità di vincita al famso gioco di
-## Monty Hall :: https://it.wikipedia.org/wiki/Problema_di_Monty_Hall
-## **********************************************************************
+## Esempio: approssimazione di un probabilità 
+## ------------------------------------------
 
+## Prob{poker d'assi servito} = 0.0001390434
+set.seed(236770)
+m      <- 1e+6
+mazzo  <- c(rep("ASSO", 4), rep("ALTRO", 48))
 
-## Simuliamo una sola iterazione del gioco, e valutiamo tre diverse strategie di
-## gioco 
-set.seed(1)
-
-## Porte
-p <- 1:3
-p
-
-## Porta con il premio
-premio     <-  sample(p , size = 1)
-premio
-
-## Porta scelta inizialmente dal giocatore 
-giocatore_1  <-  sample(x = p, size = 1)
-giocatore_1
-
-## Porta aperta dal conduttore, ovviamente una delle due con la capra, quindi 
-## il conduttore apre una delle due porte rimanenti con la capra 
-p1 <- p[-c(premio , giocatore_1)]
-if (length(p1)>1){
-    conduttore <- sample(p1, size = 1)
-}else{
-    conduttore <- p1
-}
-conduttore
-
-
-## Ora rimangono chiuse due porte
-p2 <- p[-conduttore]
-p2
-
-## Strategia 1: il giocatore si tiene la prima scelta
-## s1 = TRUE se il il giocatore vince
-s1  <-  { giocatore_1 == premio }
-s1
-
-## Strategia 2: il giocatore sceglie a caso tra la porta rimanente e quella che ha scelto
-## la prima volta 
-## s2 = TRUE se il il giocatore vince
-giocatore_2 <- sample(p2, size = 1)
-s2 <-  {giocatore_2 == premio}
-s2
-
-## Strategia 3: il giocatore cambia la porta, ovvero sceglie sempre quella lasciata
-## lasciata chiusa dal conduttore 
-## s3 = TRUE se il il giocatore vince
-giocatore_3 <- p[-c(giocatore_1, conduttore)]
-s3 <-  {giocatore_3 == premio}
-s3
-
-
-
-
-
-## Usiamo la simulazione Monte Carlo per approssimmare la probabilità di
-## vincita delle tre strategie usando n = 10000 ripetizioni simulate del gioco
-set.seed(1010)
-
-## Numero di replica Monte Carlo
-n  <- 10000
-
-## Inizializziamo i contenitori 
-s1 <- rep(FALSE, times  = n)
-s2 <- rep(FALSE, times  = n)
-s3 <- rep(FALSE, times  = n)
-
-
-for (i in 1:n){
-
-    message("Iterazione del gioco ", i , " di " , n)
-
-    ## Posizione del premio 
-    premio     <-  sample(p , size = 1)
-    ## Scelta del giocatore
-    
-    giocatore_1  <-  sample(x = p, size = 1)
-    
-    ## Scelta del conduttore
-    p1 <- p[-c(premio , giocatore_1)]
-    if (length(p1)>1){
-        conduttore <- sample(p1, size = 1)
-    }else{
-        conduttore <- p1
-    }
-    
-    ## Rimangono chiuse due porte
-    p2 <- p[-conduttore]
- 
-    ## Strategia 1: il giocatore si tiene la prima scelta
-    s1[i]  <-  { giocatore_1 == premio }
-
-    ## Strategia 2: il giocatore sceglie a caso tra le porta chiuse
-    giocatore_2 <- sample(p2, size = 1)
-    s2[i]  <-  {giocatore_2 == premio}
- 
-    ## Strategia 3: il giocatore cambia la porta
-    giocatore_3 <- p[-c(giocatore_1, conduttore)]
-    s3[i] <-  {giocatore_3 == premio}
+X <- rep(0, m)   
+for (i in 1:m) {    
+    mano <- sample(mazzo, size = 5, replace = FALSE)
+    X[i] <- {sum( mano == "ASSO" ) == 4}
 }
 
-## Approssimazione della probabilità di vincita della strategia 1:
-mean(s1)
+hat_p <- mean(X)
+hat_p
 
-## Approssimazione della probabilità di vincita della strategia 2:
-mean(s2)
+## errore di approssimazione (vero)
+abs(hat_p - p)
 
-## Approssimazione della probabilità di vincita della strategia 3:
-mean(s3)
 
+## MCSE di hat_p
+mcse <- hat_p*{hat_p} / sqrt(m)
+
+sd(X)/sqrt(m)
 
 
 
