@@ -77,8 +77,8 @@ cat("Paese = ", ct, "Media del reddito = ", m ,  "euro", sep = "---")
 
 
 ## Strittura di elementi concatenati in un file di testo
-cat("Paese = ", ct, "\nMedia del reddito = ", m ,  "euro", sep = "",
-    file="foo_cat.txt")
+    cat("Paese = ", ct, "\nMedia del reddito = ", m ,  "euro", sep = "",
+        file="foo_cat.txt")
 
 cat("\nbooooo", sep = "", file="foo_cat.txt")
 
@@ -91,7 +91,7 @@ cat("\nQuesto è il secondo cat\tCCCC\tDDDDD", sep = "",
 
 
 ## combinazione di paste and cat
-u <- paste("Ciccio è tornato", "a casa")
+u <- paste("Ciccio è tornato", "a casa") 
 cat(u)
 
 

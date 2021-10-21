@@ -90,6 +90,7 @@ X  <- X[ , -c(1,3)]
 ## ATTENZIONE: tali operazioni non sono necessariamente definite nell'algebra lineare
 X    <- matrix(data, nrow=3, byrow=TRUE)
 
+
 X * X
 
 X / X
@@ -111,6 +112,7 @@ Z  <- matrix(1:9,   nrow=3)
 
 ## Prodotto riga-colonna
 X %*% Y
+
 
 Y %*% X
 
@@ -135,6 +137,7 @@ diag(Z)
 diag(1, 10)
 
 diag(Z) <- 100
+
 
 
 
@@ -255,7 +258,6 @@ mydata      <- data.frame(Name = c("Maria", "Giuseppe", "Anna"),
 
 mydata
 
-ls()
 
 names(mydata)
 
@@ -278,26 +280,6 @@ is.list(mydata)
 
 
 
-## Link virtuale ai registri di  memoria rispetto alle colonne di un data.frame
-attach(mydata)
-
-ls()
-
-Name
-
-Gender
-
-2 * Age
-
-detach(mydata)
-
-Name
-
-dim(mydata)
-
-ncol(mydata)
-
-nrow(mydata)
 
 
 ## Metadati di un data.frame
