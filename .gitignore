@@ -4,6 +4,8 @@
 **/.#*
 **/*.xcf
 **/*.tex
+**/.Rhistory
+
 
 ## ignore dirs 
 bak
