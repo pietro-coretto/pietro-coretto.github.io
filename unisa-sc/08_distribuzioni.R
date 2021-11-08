@@ -18,9 +18,9 @@
 
 
 ## Importiamo il data set "Birth Weights"
-## http://www.decg.it/pcoretto/datasets/bwght_README.txt
+## http://www.decg.it/pcoretto/datasets/readme.txt
 ## 
-X <- read.csv(file = url("http://www.decg.it/pcoretto/datasets/bwght.csv"),
+X <- read.csv(file = url("https://pietro-coretto.github.io/datasets/bw/bw.csv"),
               header = TRUE)
 
 str(X)
@@ -86,6 +86,7 @@ table(faminc)
 table(faminc) / n
 
 ## Frequenze relative percentuali
+
 table(faminc) / n * 100
 
 
