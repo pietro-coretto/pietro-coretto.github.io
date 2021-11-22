@@ -295,17 +295,17 @@ rug(jitter(faminc), col=4)
 
 
 ## Stima di funzione di densità continua mediante Kernel Density (smoothing) 
-plot(density(faminc))
+plot(density(faminc, na.rm = TRUE))
 rug(jitter(faminc), col=4)
 
 
 ## bandwidth troppo piccola, stima di densità troppo locale
-plot(density(faminc , bw=0.5))
+plot(density(faminc , bw=0.5, na.rm = TRUE))
 rug(jitter(faminc), col=4)
 
 
 ## bandwidth troppo grande, stima di densità troppo globale
-plot(density(faminc , bw=20))
+plot(density(faminc , bw=20, , na.rm = TRUE))
 rug(jitter(faminc), col=4)
 
 
@@ -321,7 +321,7 @@ rug(jitter(faminc), col=4)
 ## Richiami: sia t un quantità reale, l'ECDF è una funzione dei dati osservati
 ## definata come segue
 ##
-##        ECDF(t) = proporzione di dati osservati  minori o uguali di t
+## ECDF(t) = proporzione di dati osservati  minori o uguali di t
 ##
 
 
@@ -341,7 +341,7 @@ ecdf_x(5)
 
 ## Infatti ad essa è associato un potente metodo di plot
 plot(ecdf_x, main = "La mia prima ECDF")
-rug(jitter(faminc), col=4)
+rug(x, col=4)
 
 
 
@@ -406,14 +406,7 @@ plot(ecdf(faminc),
 ## ************************************
 
 ## Quantile empirico al livello alpha = 0.1
-quantile(faminc , probs=0.1 , type = 1)
-
-## Nota: supponiamo che vi sia un NA
-faminc[1] <- NA
-quantile(faminc , probs=0.1 , type = 1)
-
-## ma...
-quantile(faminc, prob = 0.1,  type = 1 , na.rm = TRUE)
+quantile(faminc , probs=0.1 , type = 1, na.rm = TRUE)
 
 
 ## Calcoliamo i quantile per alpha = 0.1, 0.5, 0.7 con un solo comando
@@ -472,7 +465,7 @@ boxplot(bwghtlbs,
 ## Boxplot del peso condizionatamente al sesso 
 peso_m <- bwghtlbs[male == 1]
 peso_f <- bwghtlbs[male != 1]
-boxplot(peso_f, peso_f,  
+boxplot(peso_f, peso_m,  
         horizontal = TRUE, 
         xlab = "Peso [lb]",
         col = c("#FCE4EC", "#85C1E9"))
@@ -482,7 +475,7 @@ boxplot(peso_f, peso_f,
 ## la stessa cosa si puo' fare senza estrarre i dati per sesso
 ## Nota: per ottenere ~ su una tastiera "Italian"
 ##  + Linux/Unix :: ALTGr + ì 
-##  + MACOS      :: ALT + 5
+##  + MACOS      :: OPTION + 5
 ##  + Wndows     :: ALT + 126
 boxplot(bwghtlbs ~ male,  
         horizontal = TRUE, 

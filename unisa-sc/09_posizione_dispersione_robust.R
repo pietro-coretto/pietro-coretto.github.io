@@ -71,7 +71,7 @@ data(iris)
 str(iris)
 
 ## Ora inseriamo alcuni NA in iris
-iris[1,  1]  <- NA
+iris[1,  1]  <-  NA
 iris[2,  2]  <-  NA
 
 
@@ -123,9 +123,9 @@ x <- iris[50:55, ]
 x
 
 
-## Applichiamo  la somma di  Sepal.Length  separatamente per le classi contenute
+## Calcoliamo la media  di  Sepal.Length  separatamente per le classi contenute
 ## in x$Species
-tapply(x$Sepal.Length , INDEX = x$Species,   FUN = sum)
+tapply(x$Sepal.Length , INDEX = x$Species,   FUN = mean, rm.na = TRUE)
 
 
 ## Consideriamo un altro dataset di R
@@ -154,7 +154,7 @@ tapply( mtcars$mpg  ,
 
 ## Importiamo il data set "balancesheets"
 ##
-load(url("http://www.decg.it/pcoretto/datasets/balancesheet.RData"))
+load(url("https://pietro-coretto.github.io/datasets/balancesheet/balancesheet.RData"))
 str(dat)
 
 ## Lavoriamo con
@@ -330,7 +330,7 @@ apply(X_std_1 , MARGIN = 2 ,  FUN = sd , na.rm = TRUE)
 X_std_1b <- scale(X)
 
 ## Riproviamo a vedere i boxplot
-boxplot(X_std_1 , ylim = c(-10, 10))
+boxplot(X_std_1 , ylim = c(-10, 10), horizontal = TRUE)
 
 
 
@@ -345,7 +345,7 @@ mad_X <- apply(X , MARGIN = 2 ,  FUN = mad , na.rm = TRUE)
 X_std_2 <- scale(X ,  center = med_X, scale =  mad_X)
 
 ## Riproviamo a visualizzare  i boxplot
-boxplot(X_std_2 , ylim = c(-10, 10))
+boxplot(X_std_2 , ylim = c(-10, 10), horizontal = TRUE)
 
 
 
