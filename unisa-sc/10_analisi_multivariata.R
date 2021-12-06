@@ -16,9 +16,9 @@
 
 
 ## Importiamo il data set
-## http://www.decg.it/pcoretto/datasets/card_README.txt
+## https://pietro-coretto.github.io/datasets/card/readme.txt
 ##
-load(url("http://www.decg.it/pcoretto/datasets/card.RData"))
+load(url("https://pietro-coretto.github.io/datasets/card/card.RData"))
 str(card_dataset)
 
 
@@ -135,7 +135,7 @@ pheatmap(R)
 ## ********************************
 
 ## Tabella a doppia entrata con frequenze assolute
-tabA <- table(IQ      = cut(X$iq, breaks = c(50,100,150)),
+tabA <- table(IQ      = cut(X$iq, breaks = c(50,75,100,125150)),
               Educ =    cut(X$educ, breaks = c(5,8,13,16))
               )
 tabA
