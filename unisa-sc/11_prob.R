@@ -78,7 +78,6 @@ hist(x2 , main = "Dati da una t_2")
 
 ## campionamento iid da una uniforme su supporto [0,1]
 x3 <- runif(n = 250 , min = 0, max = 1 )
-
 hist(x3 , main = "Dati da Uniforme[0,1]")
 
 
@@ -211,6 +210,7 @@ u  <- c("X", "Y" , "Z")
 
 
 ## Estrazione di 2 oggetti, senza rimessa, a probabilità uniformi  
+set.seed(5)
 sample(u, size = 2)
 
 ## ripetiamo più volte
