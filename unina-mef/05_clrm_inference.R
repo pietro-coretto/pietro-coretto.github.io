@@ -150,7 +150,7 @@ sum_m1 <- summary(fit_1)
 sum_m1
 
 ## confidence interval for coefficients
-confint(m_1, level = 0.95)
+confint(fit_1, level = 0.95)
 
 ## Default joint test statistic (F-statistics)
 sum_m1$fstatistic
@@ -249,6 +249,7 @@ linearHypothesis(fit_1, Hnull)
 
 
 
+
 ## supopse now we want to test 
 ## 
 ##       Ho:  marginal effect of 'exper' = marginal effect of 'tenure'
@@ -263,7 +264,7 @@ linearHypothesis(fit_1, Hnull_2)
 ## can you tell what am I testing here?
 ## 
 Hnull_3 <- c("exper - tenure = 0", "urban - 0.5*south = 0")
-linearHypothesis(fit_1, Hnull_2)
+linearHypothesis(fit_1, Hnull_3)
 
 
 
