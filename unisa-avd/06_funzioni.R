@@ -12,6 +12,8 @@
 ##    * function environment vs global environment
 ##    * funzioni nascoste, funzioni primitive, esplorare una funzione
 ##    * introduzione al debugging
+##
+## Ultimo aggiornamento: 20-02-2022 at 10:43:12 (CET)
 ## =============================================================================
 
 

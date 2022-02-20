@@ -12,8 +12,7 @@
 ##    * array
 ##    * liste
 ##
-##
-## last update ::  24-02-2021 at 11:44:27 (CET)
+## last update :: 20-02-2022 at 10:36:21 (CET)
 ## =============================================================================
 
 
@@ -85,7 +84,7 @@ u
 ## ATTENZIONE: evitare l'uso di "T, F, c" per assegnare variabili
 
 
-## Contenuto del workspace
+## Contenuto del workspace/memoria
 ls()
 
 
@@ -141,13 +140,15 @@ B <- FALSE
 
 ! A
 
+A & B
+
+A | B
+
 A == B
 
 A != B
 
-A & B
 
-A | B
 
 ## passaggio di variabili logice in operazioni aritmetiche 
 A * B

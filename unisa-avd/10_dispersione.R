@@ -13,6 +13,8 @@
 ##   * standardizzazione dei dati
 ##   * strategie per standardizzare una matrice dati
 ##   * uso dei valori standardizzati per fare confronti grafici
+##
+## Ultimo aggiornamento: 20-02-2022 at 10:54:27 (CET)
 ## =============================================================================
 
 
@@ -71,9 +73,10 @@ nlm(f    = objfun,     ## funzione da minimizzare
 
 
 
-## Importiamo il data set "balancesheets"
-##
-load(url("http://www.decg.it/pcoretto/datasets/balancesheet.RData"))
+## Importiamo il data set 
+## https://pietro-coretto.github.io/datasets/balancesheet/readme.txt
+## 
+load(url("https://pietro-coretto.github.io/datasets/balancesheet/balancesheet.RData"))
 str(dat)
 
 
@@ -291,16 +294,6 @@ max(x) - min(x)
 
 
 
-
-
-
-## Importiamo il data set "balancesheets"
-##
-load(url("http://www.decg.it/pcoretto/datasets/balancesheet.RData"))
-str(dat)
-
-
-
 ## Standardizziamo dat$roa
 m_roa  <- mean(dat$roa, na.rm=TRUE)
 s_roa  <-  sd(dat$roa, na.rm=TRUE)
@@ -352,16 +345,18 @@ dev.off()
 ## * opzione 2: uso la funzione scale, ma questa funziona solo se tutte le colonne
 ##              sono di tipo numeric
 
+## Consideriamo il data set
+## https://pietro-coretto.github.io/datasets/icecream/readme.txt
+A <- read.csv(file = url("https://pietro-coretto.github.io/datasets/icecream/icecream.csv"),
+              header = TRUE)
+str(A)
+
+
 
 ## Opzione 2
 ## *********
 ## uso la funzione scale, ma questa funziona solo se tutte le colonne
 ## sono di tipo numeric.
-
-## Consideriamo l'ice cream data set con variabili di tipo numerico
-A <- read.csv(file = url("http://www.decg.it/pcoretto/datasets/icecream_hildreth_lu.csv"),
-              header = TRUE)
-str(A)
 
 ## Standardizziamo il data set
 z_A <- scale(A)

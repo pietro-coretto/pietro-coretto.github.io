@@ -11,6 +11,8 @@
 ##   * quantili empirici
 ##   * ordinamenti (semplici e gerarchici)
 ##   * quantili basati sullo smoothing dei dati ordinati
+##
+## Ultimo aggiornamento: 20-02-2022 at 10:49:23 (CET)
 ## =============================================================================
 
 
@@ -120,23 +122,22 @@ h5
 
 
 
-## Applicazione al data set bwght.csv
-dat <- read.csv(file = url("http://www.decg.it/pcoretto/datasets/bwght.csv"),
+## Applicazione al data set bw.csv
+## https://pietro-coretto.github.io/datasets/bw/readme.txt
+dat <- read.csv(file = url("https://pietro-coretto.github.io/datasets/bw/bw.csv"),
               header = TRUE)
-## Per comodità lavoriamo con il dataset in attachment
-attach(dat)
 
 
 
 ## Istogramma di faminc
-hist(faminc , col=2 ,
+hist(X$faminc , col=2 ,
      main = "Istogramma del Reddito",
      xlab = "Reddito [migliaia di USD]")
 
 
 
 ## Istogramma di lfaminc
-hist(lfaminc , col=4 ,
+hist(X$lfaminc , col=4 ,
      main = "Istogramma del log(Reddito)",
      xlab = "log(Reddito) [log(migliaia USD)]",
      density = 3, angle = 60)
@@ -206,7 +207,7 @@ cumsum(f_k)
 
 
 ## Prtima di tutto facciamo il windowing di famic nelle tre classi
-y  <- cut(faminc , breaks = c(0, 15, 20, 70))
+y  <- cut(X$faminc , breaks = c(0, 15, 20, 70))
 ny <- length(y)
 
 ## Frequenze assolute
@@ -267,11 +268,11 @@ plot(ecdf_x, main = "La mia prima ECDF")
 ## Applicazione a faminc
 ##
 par(mfrow = c(2,1))
-hist(faminc,
+hist(X$faminc,
      main = "Istrogramma del Reddito"  ,
      xlab = "Reddito [migliaia di USD]"
      )
-plot(ecdf(faminc),
+plot(ecdf(X$faminc),
      main = "ECDF del Reddito" ,
      xlab = "Reddito [migliaia di USD]"
      )
@@ -560,7 +561,7 @@ quantile(x, probs = alpha , type = 7)
 
 ## Calcoliamo altri i quantili con il type=7=default per faminc
 ## ai livelli c(1/4 ,  1/2 , 3/4)
-quantile(faminc, probs=c(1/4, 1/2, 3/4))
+quantile(X$faminc, probs=c(1/4, 1/2, 3/4))
 
 
 

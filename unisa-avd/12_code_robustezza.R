@@ -10,15 +10,18 @@
 ##   * confronto di distribuzioni mediante QQ-plot
 ##   * procedure robuste per parametri di posizione/scala
 ##   * Identificazione di putliers
+##
+## Ultimo aggiornamento: 20-02-2022 at 10:59:51 (CET)
 ## =============================================================================
 
 
 
 
 
-## Importiamo il data set "balancesheets"
-##
-load(url("http://www.decg.it/pcoretto/datasets/card.RData"))
+## Consideriamo il data set
+## https://pietro-coretto.github.io/datasets/card/readme.txt
+## 
+load(url("https://pietro-coretto.github.io/datasets/card/card.RData"))
 str(card_dataset)
 
 
@@ -124,7 +127,11 @@ g2_logx
 
 ## Metodi  robusti per misure di posizione/dispersione
 ## ***************************************************
-Y <- read.csv(url("http://www.decg.it/pcoretto/datasets/icecream_hildreth_lu.csv"),
+
+## Data set
+## https://pietro-coretto.github.io/datasets/icecream/readme.txt
+## 
+Y <- read.csv(url("https://pietro-coretto.github.io/datasets/icecream/icecream.csv"),
               header = TRUE)
 
 ## consideriamo la variabile $price  nel data set precedente

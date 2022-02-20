@@ -7,6 +7,8 @@
 ##  Argomenti:
 ##   * simmetria
 ##   * misure di simmetria
+##
+## Ultimo aggiornamento: 20-02-2022 at 10:58:28 (CET)
 ## =============================================================================
 
 
@@ -14,8 +16,10 @@
 ## Esploriamo la simmetria
 ## ***********************
 
-## Carichiamo il data set NLS80 e consideriamo la variabile IQ
-load(url("http://www.decg.it/pcoretto/datasets/nls80.RData"))
+## consideriamo il data set
+## https://pietro-coretto.github.io/datasets/nls80/readme.txt
+## 
+load(url("https://pietro-coretto.github.io/datasets/nls80/nls80.RData"))
 iq <- NLS80$iq
 
 

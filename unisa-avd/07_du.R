@@ -10,22 +10,22 @@
 ##   * frequenze / counts
 ##   * distribuzioni di frequenze
 ##   * rappresentazioni grafiche: stripchart, barplot, piechart
+##
+## Ultimo aggiornamento: 20-02-2022 at 10:44:43 (CET)
 ## =============================================================================
 
 
 
 
 ## Importiamo il data set
-## Descrizione: http://www.decg.it/pcoretto/datasets/bwght_README.txt
+## https://pietro-coretto.github.io/datasets/bw/readme.txt
 ##  
-X <- read.csv(file = url("http://www.decg.it/pcoretto/datasets/bwght.csv"),
+X <- read.csv(file = url("https://pietro-coretto.github.io/datasets/bw/bw.csv"),
               header = TRUE)
 
 ## Numero di campioni
 n <- nrow(X)
 
-## Per comodità lavoriamo con il dataset in attachment
-attach(X)
 
 
 
@@ -42,16 +42,16 @@ attach(X)
 unique( c(1,1,0) )
 
 ## quindi
-length( unique( lfaminc )  )
+length( unique( X$lfaminc )  )
 
 
 ## Nota il range dei dati è comodamente determinato con
-range( lfaminc )
+range( X$lfaminc )
 
 
 
 ## Calcolco dell'ampiezza del range dei dati
-h <- max(lfaminc) - min(lfaminc)
+h <- max(X$lfaminc) - min(X$lfaminc)
 
 
 
@@ -92,7 +92,7 @@ Delta <- h/K
 ## in due vettori separati
 xSup <- rep(0 , K)
 xInf <- rep(0 , K)
-xmin <- min(lfaminc)
+xmin <- min(X$lfaminc)
 for (k in 1:K){
    xInf[k]   <-   xmin + {k-1} * Delta
    xSup[k]   <-   xmin + k * Delta
@@ -113,7 +113,7 @@ cut(y, breaks = 2)
 
 
 ## Ritorniamo a lfaminc
-int <- cut(lfaminc, K)
+int <- cut(X$lfaminc, K)
 str(int)
 levels(int)
 
@@ -144,7 +144,7 @@ table(z)
 
 
 ## Quanti sono i livelli distinti di faminc?
-length(unique(faminc))
+length(unique(X$faminc))
 
 
 
@@ -155,23 +155,23 @@ length(unique(faminc))
 ## espressi
 
 ## Frequenze assolute
-table(faminc)
+table(X$faminc)
 
 ## Frequenze relative
-table(faminc) / n
+table(X$faminc) / n
 
 ## Frequenze relative percentuali
-table(faminc) / n * 100
+table(X$faminc) / n * 100
 
 ## converto in data.frame per leggerlo meglio
-as.data.frame( round(table(faminc) / n * 100, 2) ) 
+as.data.frame( round(table(X$faminc) / n * 100, 2) ) 
 
 
 
 
 ## Facciamo il windowing prendendo 3 intervalli di livelli uniformi
 ## Per comodità mettiamo questo dentro un array
-CutFaminc <- cut(faminc, breaks = 3)
+CutFaminc <- cut(X$faminc, breaks = 3)
 CutFaminc
 
 
@@ -194,12 +194,12 @@ table( CutFaminc  )  / n * 100
 
 
 ## costruzioni K=3 classi di livelli arbitrarie
-CutFaminc2 <- cut(faminc, breaks = c(0, 1, 10, 100))
+CutFaminc2 <- cut(X$faminc, breaks = c(0, 1, 10, 100))
 table( CutFaminc2  )  / n * 100
 
 
 ## costruzioni K=6 classi di livelli arbitrarie
-CutFaminc2 <- cut(faminc, breaks = c(0, 1, 2, 20, 30, 50, 100))
+CutFaminc2 <- cut(X$faminc, breaks = c(0, 1, 2, 20, 30, 50, 100))
 table( CutFaminc2  )  / n * 100
 
 
@@ -210,14 +210,14 @@ table( CutFaminc2  )  / n * 100
 
 ## Stripchart
 ## **********
-stripchart(faminc)
+stripchart(X$faminc)
 
-stripchart(faminc, pch = 21, col = 2, main ="Stripchart di faminc")
+stripchart(X$faminc, pch = 21, col = 2, main ="Stripchart di faminc")
 
 
 ## Jittering dei dati
 jitter(c(1,1,2,2))
-stripchart(jitter(faminc), pch = 21, col = 2, main ="Stripchart di faminc")
+stripchart(jitter(X$faminc), pch = 21, col = 2, main ="Stripchart di faminc")
 
 
 
@@ -237,8 +237,8 @@ stripchart(dat, vertical = TRUE,
 
 
 
-## Barplot della variabile X$height
-ni_male <- table(male)
+## Barplot
+ni_male <- table(X$male)
 barplot(height = ni_male)
 
 

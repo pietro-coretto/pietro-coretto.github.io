@@ -10,6 +10,8 @@
 ##   * decili e percentili
 ##   * misure condizionate
 ##   * trasformazione lineari e cambiamenti di unità di misura
+##
+## Ultimo aggiornamento: 20-02-2022 at 10:51:51 (CET)
 ## =============================================================================
 
 
@@ -170,9 +172,10 @@ by( mtcars$mpg  ,  list(Cilindri = mtcars$cyl, Cambio = mtcars$am) ,   mean)
 ## Misure di posizione
 ## *******************
 
-## Importiamo il data set "balancesheets"
-##
-load(url("http://www.decg.it/pcoretto/datasets/balancesheet.RData"))
+## Importiamo il data set
+## https://pietro-coretto.github.io/datasets/balancesheet/readme.txt
+## 
+load(url("https://pietro-coretto.github.io/datasets/balancesheet/balancesheet.RData"))
 str(dat)
 
 ## Lavoriamo con
@@ -376,10 +379,10 @@ tapply( dat$roe  ,
 ## *******************************************************
 
 
-## Carichiamo l'"icecream data data set", vedi descrizione
-## http://www.decg.it/pcoretto/datasets/icecream_hildreth_README.txt
+## Consideriamo il data set
+## https://pietro-coretto.github.io/datasets/icecream/readme.txt
 ##
-A <- read.csv(file = url("http://www.decg.it/pcoretto/datasets/icecream_hildreth_lu.csv"),
+A <- read.csv(file = url("https://pietro-coretto.github.io/datasets/icecream/icecream.csv"),
               header = TRUE)
 str(A)
 

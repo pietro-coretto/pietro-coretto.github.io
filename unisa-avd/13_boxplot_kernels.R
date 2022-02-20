@@ -8,16 +8,19 @@
 ##   * boxplot
 ##   * banda ottimale nell'istogramma
 ##   * kernel density
+##
+## Ultimo aggiornamento: 20-02-2022 at 11:02:22 (CET)
 ## =============================================================================
 
 
 
 
 
-## Importiamo il data set "card"
-##
-load(url("http://www.decg.it/pcoretto/datasets/card.RData"))
-str(card_dataset)
+## Data set
+## https://pietro-coretto.github.io/datasets/card/readme.txt
+## 
+load(url("https://pietro-coretto.github.io/datasets/card/card.RData"))
+
 
 ## Consideriamo la variabile $wage
 x <- card_dataset$wage

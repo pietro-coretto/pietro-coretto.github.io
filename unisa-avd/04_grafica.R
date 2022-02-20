@@ -13,6 +13,8 @@
 ##    * grafici multipli in una stessa finestra grafica
 ##    * tecniche di rendering: raster vs grafica vettoriale
 ##    * alcune semplici tecniche di ottimizzazione dei formai grafici
+##
+## Ultimo aggiornamento: 20-02-2022 at 10:41:17 (CET)
 ## =============================================================================
 
 
