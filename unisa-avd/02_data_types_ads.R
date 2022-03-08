@@ -60,7 +60,7 @@ round(5/2, digits = 3)
 
 a <- 5
 
-a -> 5
+5 -> a
 
 5 <- a  ## !! Attenzione
 
@@ -163,7 +163,7 @@ A / B
 ## ottenere il 'tipo' numerico di una variabile
 typeof(A)
 
-x <- 1
+x <- 1L
 typeof(x)
 
 
@@ -186,7 +186,7 @@ as.integer(x)
 
 as.double(A)
 
-
+as.numeric("8888")
 
 
 
@@ -215,7 +215,7 @@ as.double(A)
 
 
 
-## Vettore
+## Vettore = Array-1D
 ## *************************************************
 ##   * l'array più semplice
 ##   * puo' contenere un solo tipo
@@ -225,14 +225,15 @@ x <- c(1,-7, 0, 100, 3, 4, 6)
 
 ## print di un vettore
 x
-print(x) 
+print(x)  
+
 
 ## print di vettori lunghi
 y <- 1:1000
 y
 
 ## subsetting di un vettore mediante posizione 
-x[1]
+x[3]
 
 x[1:3]
 
@@ -250,6 +251,7 @@ x[x==3]
 ## è come se stessi operando come segue
 idx <- {x == 3}
 x[idx]
+
 
 ## altri esempi 
 x[x > 11]
@@ -575,15 +577,15 @@ mydata
 class(mydata)
 
 ## subsetting come per le liste e 2D-array 
-mydata$ID       
+mydata$ID      ## simplifying  
 
-mydata[[1]]
+mydata[[1]]    ## simplifying
 
-mydata[1]
+mydata[1]      ## preserving 
 
-mydata[1,1]
+mydata[1,1]    ## simplifying
 
-mydata[1, ]
+mydata[1, ]    ## preserving
 
 
 ## supponiamo di voler selezionare tutti i maschi
@@ -619,8 +621,10 @@ rownames(mydata)
 ##    * sono particolarmente utili per codificare dati statistici
 ##      come variabili ordinabili e nominali
 
-risk <- factor(c("high", "low", "median"))
+u <- c("high", "low", "median")
+u
 
+risk <- factor(u)
 risk
 
 as.numeric(risk)
@@ -633,7 +637,7 @@ risk[1] > risk[2]
 x <- c("H", "H", "L", "M", "H", "M", "L")
 x
 
-risk    <- factor(x, levels=c("L", "M", "H"), ordered=TRUE)
+risk   <-  factor(x, levels=c("L", "M", "H"), ordered=TRUE)
 risk
 
 levels(risk)

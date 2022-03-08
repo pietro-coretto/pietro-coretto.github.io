@@ -91,7 +91,7 @@ plot(x, t='p', pch = 20,  col = "tomato4", cex = 1)
 
 plot(x, t='p', pch = 20, col = "#D4356C")
 
-plot(x, t='p', pch = 20, col = rgb(0.5, .20, .30))
+plot(x, t='p', pch = 20, col = rgb(0.83, .20, .30))
 
 
 
@@ -158,7 +158,7 @@ plot(x,y, asp = 1)
 
 
 ## Overlay di rette
-plot(x,y, asp = 1)
+plot(x,y, asp = 2)
 abline(h=5, col=2, lwd = 2, lty = 3)
 abline(v=1, col=4, lwd = 2, lty = 5)
 ## Aggiungiamo una retta di equazione y = 1+2x
@@ -177,11 +177,11 @@ abline(coef=c(1,2))
 ## possiamo generare tantissimi colori con la funzione rgb()
 ## essa restituisce il codice HEX di una data mescolanza dei canali
 ## R G e B
-colA <- rgb(0.3, 0.5, 0.7)  ## = #4D80B3
+colA <- "#4D80B3" ## = rgb(0.3, 0.5, 0.7)  
 colA
-colB <- rgb(0.6, 0.2, 0.7)  ## = #9933B3 
+colB <- "#9933B3" ## = rgb(0.6, 0.2, 0.7)    
 colB
-colC <- rgb(0.6, 0.6, 0.6)  ## = #999999 = grigio al 60%
+colC <- "#999999" ## = rgb(0.6, 0.6, 0.6)  ## grigio al 60%
 colC
 
 
@@ -216,7 +216,7 @@ grid(10, 10, lwd = 1 , lty = 4 , col = colC)
 ## di coordinate (-5,-0.5)   e  (5, 0.5) e segnarli con "+"
 px <- c(-5,     5)
 py <- c(-0.5, 0.5)
-points(px , py , pch = 3, cex =5, col = 2)
+points(px , py , pch = "X", cex =5, col = 2)
 
 
 
@@ -270,7 +270,7 @@ box()
 par()
 
 ## Esempio: per tutti i grafici voglio cambiare il colore in background
-par(bg = "grey90")
+par(bg = colA)
 plot(x)
 plot(y)
 

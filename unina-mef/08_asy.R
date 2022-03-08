@@ -30,7 +30,7 @@ u      <- rt(N, df=10)
 ## compute the first term of the sequence
 eps[1] <- rho * eps0 + u[1]
 
-## loop over t=2,3,...N to complete the sequence
+## loop over i=2,3,...N to complete the sequence
 ## !!! the for loop may be avoided using vector operations 
 for(i in 2:N){
    eps[i] <- rho * eps[i-1] + u[i]
