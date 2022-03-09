@@ -32,7 +32,7 @@
 ##   Da questo punto di vista una funzione ha un ruolo diverso da uno script.
 ##
 ## * Sintassi
-##   nome.funzione  <- function(argomenti){
+##   nome_funzione  <- function(argomenti){
 ##       operazioni
 ##       return(oggetto)
 ##   }
@@ -40,10 +40,6 @@
 ##  Attenzione: per questioni di pulizia si consiglia di usare il punto "." solo
 ##  nei nomi delle funzioni, e nei nomi degli argomenti di una funzione. Evitare
 ##  di usare i punti nei nomi delle variabili.
-
-
-
-
 
 
 
@@ -112,7 +108,6 @@ polinomioB(x=c(1:10), a=-5)
 ##
 polinomioC <- function(x , a=1 , b=1, c=1) {
    y   <- a * x^2   +  b * x + c
-
    ##
    message("\nIl valore del polinomio nel punto  x=",x, " è y=", y)
 
@@ -241,16 +236,19 @@ pol <- function(x , a=1 , b=1, c=1) {
 
 ## Applichiato la funzione
 u <- pol(x=1)
+u
 
 
 ## Cosa accade al terminale con il seguente comando?
 class(u)
 
 
+## Creamo un metodo di print specifico per la classe "polinomio"
+print.polinomio <- function(x){
+   message("Ciao bello!")
+           }
 
-
-
-
+print(u)
 
 
 
@@ -374,11 +372,14 @@ foo <- function(x , y){
 ## Proviamo la funzione
 foo(2,2)
 
+ls()
 
 
 ## Fissiamo due variabili in memoria
 x <- 1
 y <- 1
+
+ls()
 
 
 ## Eseguiamo la funzione
@@ -424,6 +425,71 @@ foo2(2,2)
 
 
 
+## Prevenzione di errori
+## ************************************************************************
+
+## consideriam la funzione 
+funA <- function(x) { 
+   y <- sum(log(x))
+   return(y)
+}
+
+x <- c(2,7,9)
+funA(x)
+
+## ... ma
+x <- c(-2,7,9)
+funA(x)
+
+
+
+
+## Tecnica 1: controllo preventivo e conseguente stop 
+## (l'esecuzione si ferma allo stop)
+funB<- function(x){ 
+   if(any(x<=0)) {
+      stop("Attenzione! Non posso calcolare il log di numeri <= 0")
+   } else {
+      y <- sum(log(x))
+   }
+   return(y)
+}
+
+u <- funB(x)
+
+## ovviamente u non esiste in questo caso
+u
+
+
+
+
+## Tecnica 2: controllo preventivo, allert e possibilità di produrre un risultato 
+## anche se di contenuto non numerico 
+funC<- function(x){ 
+   if(any(x<=0)){
+      y <- NaN
+      message("Attenzione! Non posso calcolare il log di numeri <= 0")
+   } else {
+      y <- sum(log(x))
+   }
+   return(y)
+}
+
+u <- funC(x)
+
+## In questo caso non c'è un breaker, e la funziona calcola un valore non numerico
+u
+
+
+
+
+
+
+
+
+
+
+
 
 ## Debugging: trovare il "call stack" (sequenza a  ritroso fino all'errore)
 ## ************************************************************************
@@ -457,6 +523,8 @@ f(-1)
 
 ## RStudio individua il call stack automaticamente, esso è ottenuto da R
 traceback()
+
+
 
 
 
