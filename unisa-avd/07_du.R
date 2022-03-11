@@ -118,7 +118,7 @@ str(int)
 levels(int)
 
 ## Infatti
-Intervalli
+int
 
 
 

@@ -214,115 +214,6 @@ linearHypothesis(olsfit, Ho, vcov. = hatVarb_2,  test="Chisq")
 
 
 
-## Breusch-Godfrey Test: our own implementation 
-## --------------------------------------------
-
-## At some point we need to produce lagged version of residuals. R-base has
-## the lag() function which requires that the input is a time-series object.
-## There are other pkgs with better functions to lag variables.
-## Let's take the chance to practice and  produce our own functionality
-##
-## I program a  custom function that returns a vector of the same size of 'x'
-## shifted 'l' position back (when l<0), or 'l' positions ahead (when l>0)
-## Elements of x lost during shift are replaced with NA. This is not the best
-## way of doing it, but it's not bad
-## 
-lag_vector <- function(x , l = -1) {
-
-    shift <- abs(l)
-    n     <- length(x)
-
-    ## check if we have enough measurements
-    if (n-shift < 1) {
-        stop("'x' does not contain enough measurements compared to 'l'")
-    }
-    ## add some more checks on 'x'  here
-
-    if (l<0) {
-        ## lag-back x when l<0
-        y <-  c(rep(NA, times = shift) , x[1:{n-shift}])
-    } else if (l>0){
-        ## lag-ahead x when l>0
-        y <-  c(x[{1+shift}:n], rep(NA, times = shift)) 
-    }else {
-        y <- x
-    }
-
-    return(y)
-}
-
-
-## Example
-x <- 1:10
-data.frame(curren_value     = x,
-           back_1  = lag_vector(x,  l = -1),
-           back_2  = lag_vector(x , l = -2),
-           ahead_1 = lag_vector(x , l = 1),
-           ahead_2 = lag_vector(x , l = 2)
-           )
-
-
-
-
-## Consider "gasoline expenditure data" from Johnston and DiNardo (1997)
-file_dat <- url("http://www.decg.it/pcoretto/unina-mef/data_gasoline_expenditure.txt")
-dat      <- read.table(file_dat, header = TRUE)
-
-## see some data
-head(dat)
-
-## we want to model gas consumption at time t. We also want to create some new
-## regressor 
-dat$price2       <- dat$price^2
-dat$price_income <- dat$price * dat$income 
-
-## model
-m1   <- "gas ~ 1 + income + price +  price2 + price_income"
-fit  <- lm(m1, data = dat)
-summary(fit)
-
-## time-series plot of residuals
-plot(fit$residuals , t="l")
-
-## look at the acf
-acf(fit$residuals)
-
-## suppose we want to run Breusch-Godfrey test... just in case we still
-## some doubts about serial correlation in residuals!
-## Suppose we want to test the
-## Ho: residuals are uncorrelated up to order p=4
-
-## First we add lagged residuals to the original data
-##
-dat2 <- cbind(dat,
-              e  = fit$residuals,
-              e1 = lag_vector(fit$residuals, l = -1),
-              e2 = lag_vector(fit$residuals, l = -2),
-              e3 = lag_vector(fit$residuals, l = -3),
-              e4 = lag_vector(fit$residuals, l = -4))
-
-## let's see 
-head(dat2)
-
-
-## auxiliary regression model
-maux    <- "e ~ 1 + income + price +  price2 + price_income + e1 + e2 + e3 + e4"
-fit_aux <- lm(maux, data = dat2)
-
-## get the R^2
-Raux <- summary(fit_aux)$r.squared
-
-## compute the Breusch-Godfrey test statistic
-BGstat <- { nrow(dat) - 4 } * Raux
-BGstat
-
-## cutoff value
-q_cut <- qchisq(0.95, df = 4)
-q_cut
-
-## BGstat > q_Cut  ===> we do not reject Ho
-
-
 
 
 
@@ -333,9 +224,133 @@ q_cut
 ## install.packages("lmtest")
 library("lmtest")
 
-## replicate test
-bgtest(fit, order = 4, type = "Chisq", fill = NA)
+
+
+## Consider the icecream data
+## https://pietro-coretto.github.io/datasets/icecream/readme.txt
+##
+file_dat <- url("https://pietro-coretto.github.io/datasets/icecream/icecream.csv")
+dat      <- read.csv(file_dat, header = TRUE)
+
+
+## model
+m1   <- "cons ~ 1 + income + price +  temp"
+fit  <- lm(m1, data = dat)
+summary(fit)
+
+## time-series plot of residuals
+plot(fit$residuals , t="l")
+
+## look at the acf
+acf(fit$residuals)
+
+
+## test serial correlation at lag 1
+bgtest(fit, order = 1, type = "Chisq", fill = NA)
 
 
 ## try higher order
-bgtest(fit, order = 10, type = "Chisq", fill = NA)
+bgtest(fit, order = 2, type = "Chisq", fill = NA)
+
+
+
+
+
+
+
+
+## Breusch-Godfrey Test: our own implementation 
+## --------------------------------------------
+
+## At some point we need to produce lagged version of residuals. R-base has
+## the lag() function which requires that the input is a time-series object.
+## There are other pkgs with better functions to lag variables.
+## Let's take the chance to practice and  produce our own function
+##
+## I program a  custom function that returns a vector of the same size of 'x'
+## shifted 'l' position back (when l<0), or 'l' positions ahead (when l>0)
+## Elements of x lost during shift are replaced with NA. This is not the best
+## way of doing it, but it's not bad
+## 
+lag_vector <- function(x , l = -1) {
+    
+    shift <- abs(l)
+    n     <- length(x)
+    
+    ## check if we have enough measurements
+    if (n-shift < 1) {
+        stop("'x' does not contain enough measurements compared to 'l'")
+    }
+    
+    ## todo: add some more checks on 'x'  here
+    
+    ## now lag values
+    if (l<0) {
+        ## lag-back x when l<0
+        y <-  c(rep(NA, times = shift) , x[1:{n-shift}])
+    } else if (l>0){
+        ## lag-ahead x when l>0
+        y <-  c(x[{1+shift}:n], rep(NA, times = shift)) 
+    }else {
+        y <- x
+    }
+    
+    return(y)
+}
+
+## Example
+x <- 1:10
+data.frame(curren_value     = x,
+           back_1  = lag_vector(x,  l = -1),
+           back_2  = lag_vector(x , l = -2),
+           ahead_1 = lag_vector(x , l = 1),
+           ahead_2 = lag_vector(x , l = 2)
+)
+
+
+
+
+
+
+## Suppose we want to run the BG test at lag {1,2}. We add lagged regressors to
+## the original data and residuals 
+dat2 <- cbind(dat,
+              e  = fit$residuals,
+              e1 = lag_vector(fit$residuals, l = -1),
+              e2 = lag_vector(fit$residuals, l = -2))
+
+## let's see 
+head(dat2)
+
+
+## auxiliary regression model
+maux    <- "e ~ 1 + income + price +  temp +  e1 + e2"
+fit_aux <- lm(maux, data = dat2)
+
+## get the R^2
+Raux <- summary(fit_aux)$r.squared
+
+## compute the Breusch-Godfrey test statistic
+BGstat <- { nrow(dat) - 2 } * Raux
+BGstat
+
+## cutoff value
+q_cut <- qchisq(0.95, df = 4)
+q_cut
+
+## test decision
+rejectH0 <- {BGstat >= q_cut}
+rejectH0
+    
+    
+## compare the calculated BG statistic: bgtest() uses a different approach to 
+## calculate the BG statistics so there might be small numerical differences
+bgtest(fit, order = 2, type = "Chisq", fill=NA)
+BGstat
+
+
+
+
+
+
+
