@@ -573,7 +573,7 @@ quantile(X$faminc, probs=c(1/4, 1/2, 3/4))
 
 
 ## *****************************************************************************
-## ESERCIZI:
+## APPENDICE:
 ## ripeti con attenzione la lezione. Explora i seguenti comandi
 ## ed assicurati di aver compreso pienamente il risultato dell'esecuzione
 ## *****************************************************************************

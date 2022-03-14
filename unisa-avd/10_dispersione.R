@@ -13,8 +13,6 @@
 ##   * standardizzazione dei dati
 ##   * strategie per standardizzare una matrice dati
 ##   * uso dei valori standardizzati per fare confronti grafici
-##
-## Ultimo aggiornamento: 20-02-2022 at 10:54:27 (CET)
 ## =============================================================================
 
 
@@ -461,7 +459,7 @@ legend("topright", legend = c("Prezzo", "Consumo"), col=c(2,4), lty=c(1,1))
 
 
 ## *****************************************************************************
-## ESERCIZI:
+## APPENDICE:
 ## ripeti con attenzione la lezione. Explora tutti i comandi cercando  di
 ## apportare piccole variazioni ed  analizzando il risultato
 ## *****************************************************************************

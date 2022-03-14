@@ -7,8 +7,6 @@
 ##  Argomenti:
 ##   * simmetria
 ##   * misure di simmetria
-##
-## Ultimo aggiornamento: 20-02-2022 at 10:58:28 (CET)
 ## =============================================================================
 
 
@@ -56,19 +54,5 @@ Q[3] - Q[2]
 ## Calcoliamo il coefficiente di Yule-Bowley
 B1 <- { Q[1] + Q[3] - 2*Q[2] } / {Q[3] - Q[1]}
 B1
-
-
-
-
-
-
-## *****************************************************************************
-## ESERCIZI:
-## ripeti con attenzione la lezione. Explora tutti i comandi cercando  di
-## apportare piccole variazioni ed  analizzando il risultato
-## *****************************************************************************
-
-
-
 
 

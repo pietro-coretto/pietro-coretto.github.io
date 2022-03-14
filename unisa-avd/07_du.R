@@ -301,12 +301,6 @@ diff(range(y))
 
 
 
-
-
-
-
-
-
 ## Prova a modificare  i parametri della funzione cut()
 y <- c(0,-1,2,4,2,5)
 

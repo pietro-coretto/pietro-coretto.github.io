@@ -8,8 +8,6 @@
 ##   * boxplot
 ##   * banda ottimale nell'istogramma
 ##   * kernel density
-##
-## Ultimo aggiornamento: 20-02-2022 at 11:02:22 (CET)
 ## =============================================================================
 
 
@@ -196,11 +194,4 @@ plot(dSJ)
 
 
 
-
-
-
-## *****************************************************************************
-## ESERCIZI:
-## ripeti con attenzione la lezione. Explora tutti i comandi cercando  di
-## apportare piccole variazioni ed  analizzando il risultato
-## *****************************************************************************
+## end

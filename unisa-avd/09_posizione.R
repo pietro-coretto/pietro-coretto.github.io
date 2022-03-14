@@ -456,9 +456,3 @@ a + b * quantile(x , probs = alpha)
 
 
 
-## *****************************************************************************
-## ESERCIZI:
-## ripeti con attenzione la lezione. Explora tutti i comandi cercando  di
-## apportare piccole variazioni ed  analizzando il risultato
-## *****************************************************************************
-

@@ -10,8 +10,6 @@
 ##   * confronto di distribuzioni mediante QQ-plot
 ##   * procedure robuste per parametri di posizione/scala
 ##   * Identificazione di putliers
-##
-## Ultimo aggiornamento: 20-02-2022 at 10:59:51 (CET)
 ## =============================================================================
 
 
@@ -292,11 +290,3 @@ yy[ which(idx_gross_out) ]
 
 
 
-
-
-
-## *****************************************************************************
-## ESERCIZI:
-## ripeti con attenzione la lezione. Explora tutti i comandi cercando  di
-## apportare piccole variazioni ed  analizzando il risultato
-## *****************************************************************************
