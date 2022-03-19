@@ -167,15 +167,19 @@ library(lmtest)
 
 
 ## The pkg "sandwich" is able to compute several appproximate estimators of Var(b)
-## given an lm() object as input. For example the following command estimates
-## Var[b] (not AVvar(b)). For example we can easily compute the var matrix
-## corresponing to the "Heteroskedasticity-Robust Asymptotic Variance" as follows
-hatVarb_2 <- vcovHC(olsfit, type = "HC1")
+## given an lm() object as input. The following command estimates
+## Var[b] (not AVvar(b)) based on the White's "Heteroskedasticity-Robust 
+## Asymptotic Variance" matrix. The argument  type = "HC0" implements exactly 
+## the White Estimator, but there are further improved corrections, the default
+## is "HC3" corrction by Cribari-Neto (2004).
+## 
+## by setting type = "HC0"
+hatVarb_2 <- vcovHC(olsfit, type = "HC0")
 
 ## now compare the difference with our own implementation before 
-hatVarb - hatVarb_2  #... it's a mess
+hatVarb - hatVarb_2 
 
-## better to check the max absolute value difference 
+## or check the max absolute pairwise value difference 
 max(abs(hatVarb - hatVarb_2 ))
 
 

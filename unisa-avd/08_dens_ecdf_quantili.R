@@ -124,7 +124,7 @@ h5
 
 ## Applicazione al data set bw.csv
 ## https://pietro-coretto.github.io/datasets/bw/readme.txt
-dat <- read.csv(file = url("https://pietro-coretto.github.io/datasets/bw/bw.csv"),
+X <- read.csv(file = url("https://pietro-coretto.github.io/datasets/bw/bw.csv"),
               header = TRUE)
 
 
@@ -309,6 +309,7 @@ x <- c(-1,2,0,3,2,1,1,0,5,6,6,7)
 n <- length(x)
 
 
+
 ## Approssimazione 1: quantili empirici
 ## ************************************
 
@@ -327,6 +328,7 @@ quantile(x, prob = 0.1,  type = 1 , na.rm = TRUE)
 ## Calcoliamo i quantile per alpha = 0.1, 0.5, 0.7 con un solo comando
 a <- c(0.1, 0.5, 0.7)
 quantile(x, prob = a,  type = 1 , na.rm = TRUE)
+
 
 
 
@@ -410,7 +412,7 @@ sx$ix
 ## Domanda: quale elemento di x devo mettere al terzo posto nel vettor
 ## ordinato?
 ox <- order(x)
-ox[3]
+x[ox]
 
 
 ## Infatti analogamente a quanto visto prima posso anche ordinare il vettore
@@ -548,7 +550,7 @@ gamma     <- jstar - j
 sx  <- sort(x)
 
 ## Possiamo ora calcolare l'approssimazione
-X_alpha  = {1-gamma} * sx[j] + gamma * sx[j+1]
+X_alpha  = {1-gamma} * +sx[j] + gamma * sx[j+1]
 X_alpha
 
 
