@@ -302,17 +302,6 @@ z_roa  <- { dat$roa - m_roa } / s_roa
 mean(z_roa, na.rm=TRUE)
 var(z_roa, na.rm=TRUE)
 
-## Ampiezza del range della variabile originaria
-max(dat$roa, na.rm=TRUE)  -  min(dat$roa, na.rm=TRUE)
-
-## Ampiezza del range della variabile standardizzata
-max(z_roa, na.rm=TRUE)  -  min(z_roa, na.rm=TRUE)
-
-## Infatti l'ampiezza è stata modificata come previsto dalle proprietà
-## sulle trasformazioni lineari
-1/s_roa * { max(dat$roa, na.rm=TRUE)  -  min(dat$roa, na.rm=TRUE) }
-
-
 
 
 ## La standardizzazione ha cambiato altri aspetti della distribuzione ?
@@ -338,40 +327,16 @@ dev.off()
 
 
 ## E se volessi standardizzare tutte le variabili nel data set?
-##
-## * opzione 1: scrivo un for-loop sulle colonne di dat
-## * opzione 2: uso la funzione scale, ma questa funziona solo se tutte le colonne
-##              sono di tipo numeric
-
-## Consideriamo il data set
 ## https://pietro-coretto.github.io/datasets/icecream/readme.txt
 A <- read.csv(file = url("https://pietro-coretto.github.io/datasets/icecream/icecream.csv"),
               header = TRUE)
 str(A)
 
 
-
-## Opzione 2
-## *********
-## uso la funzione scale, ma questa funziona solo se tutte le colonne
-## sono di tipo numeric.
-
-## Standardizziamo il data set
+## Standardizziamo il data set con scale
 z_A <- scale(A)
 z_A
 
-## Attenzione
-is.matrix(A)
-is.matrix(z_A)
-
-## Trasformiamolo in data.frame per comodità
-z_A <- as.data.frame(z_A)
-z_A
-
-
-## Opzione 1
-## *********
-## vedi esercizi alla fine
 
 
 

@@ -9,7 +9,7 @@
 ##   * code normali  e "Normal QQ-plot"
 ##   * confronto di distribuzioni mediante QQ-plot
 ##   * procedure robuste per parametri di posizione/scala
-##   * Identificazione di putliers
+##   * Identificazione di outliers
 ## =============================================================================
 
 
@@ -94,16 +94,6 @@ abline(a=1, b=1, col=2)
 
 
 
-## Calcoliamo l'indice g_2 = eccesso di curtosi su wage
-g2_x <- mean( scale(x)^4 )  - 3
-g2_x
-
-
-
-## ... tuttavia, x ha una distribuzione che devia fortemente dalla unimodalità
-## proviamo con la trasformata logaritmica
-g2_logx <- mean( scale(logx)^4 )  - 3
-g2_logx
 
 
 
@@ -213,23 +203,21 @@ mean(yy , trim = 0.25)   ## alfa = trim  = 25%
 
 
 
-## Calcoliamo la dispersione usando il MAD
-mad(yy)
-sd(y)
-IQR(y)
-sd(yy)
-IQR(yy)
-mad(yy)
+## Calcoliamo la dispersione 
+disp_y  <- c(sd = sd(y),  iqr = IQR(y),  mad = mad(y))
+disp_yy <- c(sd = sd(yy), iqr = IQR(yy), mad = mad(yy))
+rbind(disp_y, disp_yy)
+
+
+
 
 ## Standardizziamo i dati non contaminati
 zy <- scale(y , center = mean(y), scale = sd(y))
 hist(zy)
 
-
 ## Standardizziamo i dati contaminati
 zyy <- scale(yy , center = mean(yy), scale = sd(yy))
 hist(zyy)
-
 
 ## Standardizziamo usando l'equivalente robusto
 rob_zyy <- scale(yy , center = mean(yy , 0.2), scale = mad(yy))
