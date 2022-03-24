@@ -305,21 +305,16 @@ var(z_roa, na.rm=TRUE)
 
 
 ## La standardizzazione ha cambiato altri aspetti della distribuzione ?
-x11()
 par(mfrow = c(2,1))
 hist(dat$roa)
 hist(z_roa)
 
 
 ## ed infatti anche per la ECDF
-x11()
 par(mfrow = c(2,1))
 plot( ecdf(dat$roa) )
 plot( ecdf(z_roa) )
 
-
-## chiudiamo tutte le finestre grafiche
-dev.off()
 
 
 
@@ -330,7 +325,6 @@ dev.off()
 ## https://pietro-coretto.github.io/datasets/icecream/readme.txt
 A <- read.csv(file = url("https://pietro-coretto.github.io/datasets/icecream/icecream.csv"),
               header = TRUE)
-str(A)
 
 
 ## Standardizziamo il data set con scale
@@ -386,6 +380,8 @@ lines(settimana,A$cons, col = 3)
 legend("topright", legend = c("Prezzo", "Consumo"), col=c(2,3), lty=c(1,1))
 
 
+## trasformo l'oggetto scale in data.frame
+z_A <- as.data.frame(z_A)
 
 
 ## Cosa succede se plottiamo le variabili standardizzate?
