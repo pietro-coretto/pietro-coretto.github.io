@@ -129,7 +129,7 @@ y <- Y$price
 hist(y)
 
 ## Peso delle Code
-qqnorm(y, main="Anni di istruzione")
+qqnorm(y, main="Prezzo")
 qqline(y, col = 2)
 
 
@@ -248,8 +248,8 @@ k    <- 1.5
 Hinf <- Q[1] - k * { Q[3] - Q[1]}
 Hsup <- Q[3] + k * { Q[3] - Q[1]}
 
-## Posizioni dei sospettati
-idx_out<- { yy < Hinf |  yy > Hsup }
+## Posizioni dei sospettati outliers 
+idx_out <- { yy < Hinf |  yy > Hsup }
 which(idx_out)
 
 ## Chi sono?
@@ -257,7 +257,7 @@ yy[ which(idx_out) ]
 
 
 
-## Identifichiamo i sospetti gross outliers con k=3
+## Identifichiamo i sospetti gross-outliers con k=3
 k    <- 3
 Hinf <- Q[1] - k * { Q[3] - Q[1]}
 Hsup <- Q[3] + k * { Q[3] - Q[1]}
@@ -274,6 +274,14 @@ yy[ which(idx_gross_out) ]
 
 
 
+## Standardizziamo usando l'equivalente robusto
+yy_clean <- yy[-which(idx_gross_out)]
+hist(yy_clean)
+
+
+## distribuzione dei dati precedentemente standardizzati senza gli 
+## outliers 
+hist(rob_zyy[-which(idx_gross_out)])
 
 
 

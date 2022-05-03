@@ -446,7 +446,7 @@ alpha <- 0.25
 quantile(x , probs = alpha)   ## quantile dei dati originario in in Fahrenheit
 quantile(y , probs = alpha)   ## quantile dei nuovi dati in in Celsius
 
-## Poichè b>0, la proprietà ci dice che il quantile di y = Celsiusi è
+## Poichè b>0, la proprietà ci dice che il quantile di y = Celsius è
 a + b * quantile(x , probs = alpha)
 
 
