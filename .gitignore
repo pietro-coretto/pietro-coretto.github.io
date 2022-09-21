@@ -1,0 +1,13 @@
+## ignore these files everywhere 
+**/*.sh
+**/x_*
+**/*_bak
+**/.#*
+**/*.xcf
+**/*.tex
+**/.Rhistory
+
+
+## ignore dirs 
+bak
+bak/*

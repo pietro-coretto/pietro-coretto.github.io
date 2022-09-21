@@ -1,0 +1,245 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
+
+
+/*  simple Body */
+body{ font-size: 16px;
+      color: black;
+      font-family: "Times New Roman", Times, serif;
+      background-color: #F1F0EC; /* #F5F5F5; */
+      width: 800px;     
+      margin-left:  35px; 
+      margin-right: auto; 
+      margin-top:   20px; 
+      margin-bottom: auto; 
+}
+
+/* contacts table */
+.contacts {
+  font-family: "Cousine";
+  font-size: 1.05em; 
+}
+
+
+/* preformatted text */
+pre{
+  font-size: 1em;
+  display: block;
+  font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+  white-space: pre;
+  margin: 0em 0em;
+}
+
+
+/* links */
+a:link {color: blue; text-decoration: none;}
+a:hover {color: #C4262E;}
+a:visited {color: blue; text-decoration: none;}
+a:visited:hover { color: #C4262E; text-decoration: none;}
+a:active { color: #C4262E; }
+
+
+/* /\* Colors *\/ */
+/* .MySand{color: #DFE0DA} */
+/* .MyGrey{color: #E5E5E5} */
+/* .GreenAlitalia{color: #006643} */
+/* .RedAlitalia{color: #C4262E} */
+/* .RedFB{color: #CC3333} */
+/* .BlueFB{color:#3B5998 } */
+/* .Orange{color: #DC9D24} */
+
+
+
+/* headers */
+h1{
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.h1Style{
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2{
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.h2Style{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h3{
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.h3Style{
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+h4{
+  display: block;
+  font-size: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.h4Style{
+  font-size: 1em;
+  font-weight: bold;
+}
+
+
+
+
+
+
+/* /\* Relative font size *\/ */
+/* .fondo{ font-size: 0.8%} */
+
+/* .Font150{font-size: 150%; */
+/*    text-decoration: none */
+/*    } */
+
+/* .Font200{font-size: 200%; */
+/*    text-decoration: none */
+/*    } */
+
+/* .Font250{font-size: 250%; */
+/*    text-decoration: none */
+/*    } */
+
+/* .Font300{font-size: 300%; */
+/*    text-decoration: none */
+/*    } */
+
+/* .Font350{font-size: 350%; */
+/*    text-decoration: none */
+/*    } */
+
+/* .Font400{font-size: 400%; */
+/*    text-decoration: none */
+/*    } */
+
+
+
+
+/* blink (old)  */
+/* usage: <span class="blink"><b>News:</b></span> */
+.blink {
+  animation: blink-animation 1s steps(3, start) infinite;
+  -webkit-animation: blink-animation 1s steps(3, start) infinite;
+  color: #CC0000;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+
+/* /\* table class: description *\/ */
+/* table.description{ */
+/*     font-size: 100%; */
+/*     border-collapse: separate; */
+/*     border-spacing: 0 0.1ex; */
+/* } */
+
+/* table.description td { */
+/*     padding: 0.1ex 0; */
+/*     font-weight: bold; */
+/* } */
+
+
+
+
+/* ordered list*/
+ol {
+    display: block;
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin-top:    1em;
+    margin-bottom: 1em;
+    margin-left:   0;
+    margin-right:  0;
+    padding-left:  2em;
+}
+
+/* ordered list, lower level  */
+ol.blevel {
+    display: block;
+    list-style-type: lower-alpha;
+    list-style-position: outside;
+    margin-top:    0em;
+    margin-bottom: 0em;
+    margin-left:   0;
+    margin-right:  0;
+    padding-left:  0.75em;
+}
+
+ 
+/* ordered list for page contents */
+ol.contents {
+    display: block;
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin-top:    1em;
+    margin-bottom: 1em;
+    margin-left:   0;
+    margin-right:  0;
+    padding-left:  0em;
+}
+
+
+/* unordered list */
+ul {
+    display: block;
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-top:    1em;
+    margin-bottom: 1em;
+    margin-left:   0;
+    margin-right:  0;
+    padding-left:  2em;
+}
+
+
+/* unordered list, lower level */
+ul.blevel {
+    display: block;
+    list-style-type: "- ";
+    list-style-position: outside;
+    margin-top:    0em;
+    margin-bottom: 0em;
+    margin-left:   0;
+    margin-right:  0;
+    padding-left:  0.75em;
+}
+

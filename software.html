@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pietro Coretto: software</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <link rel="Stylesheet" type="text/css" href="pietrohome.css">
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-69281155-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+  </head>
+  <body>
+
+
+    <a name="su"></a>
+    <a href="index.html">home</a>
+    <hr>
+
+
+
+<h1>Software</h1>
+<ul class="contents">
+<li><a href="#sw_otrimle">OTRIMLE: robust model-based clustering</a></li>
+<li><a href="#sw_rsc">RSC:  robust and sparse correlation matrix</a></li>
+<li><a href="#sw_hyqsar">hyQSAR: hybrid quantitative structure–activity relationship (QSAR) modelling</a></li>
+<li><a href="#sw_rcps">RCPS:  robust clustering for patient subtyping</a></li>
+</ul>
+
+
+<br>
+<hr>
+<br>
+
+
+
+<a name="sw_otrimle"></a>
+<h2>OTRIMLE: robust model-based clustering </h2>
+
+<div align="left"><img src="imgs/sw_otrimle.png" alt="" width=75%></div>
+
+<p>OTRIMLE is an R package that performs robust cluster analysis allowing for outliers and noise that cannot be  fitted by any cluster. The data are modelled by a mixture of Gaussian distributions  and a noise component, which is an improper uniform distribution covering the whole  Euclidean space. Parameters are estimated by (pseudo) maximum likelihood. This is  fitted by a EM-type algorithm.</p>
+
+
+<p><a href="https://cran.r-project.org/package=otrimle" target="_blank"><b>Download package from CRAN</b></a></p>
+
+
+<p>
+<b>References</b>
+<ul>
+
+<li>
+P. Coretto  and C. Hennig (2016).   <b>Robust improper maximum likelihood: tuning, computation, and a comparison with other methods for robust Gaussian clustering</b>.  <em>Journal of the American Statistical Association</em>, Vol. 111(516), pp. 1648-1659.  <a href="http://dx.doi.org/10.1080/01621459.2015.1100996"  target="_blank">DOI link (open access)</a>
+</li>
+
+<li>
+P. Coretto and C. Hennig (2107).  <b>Consistency, breakdown robustness, and algorithms for robust improper maximum likelihood clustering</b>.  <em>Journal of Machine Learning Research</em>, Vol. 18(142), pp. 1-39.  <a href="http://jmlr.org/papers/v18/16-382.html"  target="_blank">Download (open access)</a>
+</li>
+
+</ul>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<hr>
+<br>
+<a name="sw_rsc"></a>
+<h2>RSC:  robust and sparse correlation matrix</h2>
+
+
+<div align="left"><img src="imgs/sw_rsc.png" alt="" width=60%></div>
+
+<p>
+RSC is an R package that computes an estimate of the correlation matrix that is resistant to large amount of noise/outliers.  Adaptive thresholding is applied to obtain a sparse estimate. The software is fairly scalable and can handle massive data sets.
+</p>
+
+<p><a href="https://cran.r-project.org/web/packages/RSC/index.html" target="_blank"><b>Download package from CRAN</b></a></p>
+
+
+
+<p>
+<b>References</b>
+<br><br>
+
+A. Serra, P. Coretto, M. Fratello, and R. Tagliaferri (2018). <b>Robust and sparse correlation matrix estimation for the analysis of high-dimensional genomics data</b>. <em>Bioinformatics</em>, Vol. 34(4), pp. 625-634.  <a href="https://doi.org/10.1093/bioinformatics/btx642"  target="_blank">DOI link</a>.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<hr>
+<br>
+<a name="sw_hyqsar"></a>
+<h2>hyQSAR: hybrid quantitative structure–activity relationship (QSAR) modelling </h2>
+
+
+<div align="left"><img src="imgs/sw_hyqsar.png" alt="" width=75%></div>
+
+<p>
+hyQSAR is an R package that can be used to perform hybrid QSAR modelling by integrating structural properties of chemical compounds and their molecular mechanism-of-action (MOA) information. HyQSAR enables easier interpretation of the mechanistic associations between the exposure properties and their biological effects for a given endpoint of interest. It implements a LASSO-based method to optimise the feature selection from multiple data sources as well as the best model parameters by random split validation. In addition, hyQSAR allows automatic model validation according to the OECD requirements. Multiple visualisations are also provided to help the interpretation of the output.
+</p>
+
+
+<p>
+<a href="https://github.com/angy89/hyQSAR" target="_blank"><b>Download software (development  version) via GitHub</b></a> (also contains data used in the references given below)
+</p>
+
+
+
+<p>
+<b>References</b>
+<br><br>
+
+A. Serra, S. Önlü, P. Coretto, and D. Greco (2019). <b>An integrated quantitative structure and mechanism of action-activity relationship model of human serum albumin binding</b>. <em>Journal of Cheminformatics</em>, Vol. 11(38), pp.1-10. <a href="https://jcheminf.biomedcentral.com/articles/10.1186/s13321-019-0359-2" target="_blank">DOI link (open access)</a>
+</p>
+
+
+
+
+
+
+
+
+<br>
+<hr>
+<br>
+<a name="sw_rcps"></a>
+
+<h2>RCPS:  robust clustering for patient subtyping</h2>
+
+<div align="left"><img src="imgs/sw_rcps.png" alt="" width=60%></div>
+
+
+<p>
+RCPS is an R library that performs robust clustering for patient subtyping that guarantees optimal separation in terms of survival patterns. The method computes a robust and sparse correlation matrix of the genes, then decomposes it and projects the patient data onto the first <i>m</i> spectral components of this matrix. After that, the OTRIMLE, a robust and adaptive to noise clustering algorithm is applied. The clustering is set up to optimize the separation between survival curves estimated cluster-wise. 
+</p>
+
+
+<p>
+<a href="https://github.com/angy89/RobustClusteringPatientSubtyping" target="_blank"><b>Download software (development  version) via GitHub</b></a> (also contains data used in the references given below)
+</p>
+
+
+
+<p>
+<b>References</b>
+<br><br>
+
+P. Coretto, A. Serra and R. Tagliaferri (2018).  <b>Robust clustering of noisy high-dimensional gene expression data for patients subtyping</b>. <em>Bioinformatics</em>, Vol. 34(23), pp. 4064–4072. <a href="https://doi.org/10.1093/bioinformatics/bty502" target="_blank">DOI link</a>
+</p>
+
+
+
+
+
+
+
+
+
+
+    <!-- Fondo Pagina --> 
+    <hr>
+    <table border="0" cellpadding="1" cellspacing="1" width="100%">
+      <tr>
+	<td align="left" valign="top" width="50%"><a href="index.html">home</a></td>
+	<td align="right" valign="top" width="50%"></td>
+      </tr>
+    </table>
+  </body>
+</html>
