@@ -1,0 +1,27 @@
+{
+  "name": "Form-File-Upload",
+  "version": "0.0.3",
+  "description": "Form-File-Upload",
+  "author": "Maximilian Heinz",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-concat": "latest",
+    "gulp-csso": "latest",
+    "gulp-jscs": "latest",
+    "gulp-jshint": "latest",
+    "gulp-less": "latest",
+    "gulp-mocha": "latest",
+    "gulp-rename": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "latest",
+    "gulp-wrap-umd": "latest",
+    "jshint-stylish": "latest"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/gulp"
+  },
+  "engines": {
+    "node": "0.10.3"
+  }
+}
