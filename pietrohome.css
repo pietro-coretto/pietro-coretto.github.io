@@ -6,7 +6,7 @@
 body{ font-size: 16px;
       color: black;
       font-family: "Times New Roman", Times, serif;
-      background-color: #F1F0EC; /* #F5F5F5; */
+      background-color: #F1F0EC; /* #F8F6F3;  #F5F5F5; */
       width: 800px;     
       margin-left:  35px; 
       margin-right: auto; 
@@ -29,6 +29,7 @@ pre{
   white-space: pre;
   margin: 0em 0em;
 }
+
 
 
 /* links */
