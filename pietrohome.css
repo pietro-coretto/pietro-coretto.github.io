@@ -1,31 +1,18 @@
 /* import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
 
-/*  simple Body */
-/* body{ font-size: 16px; */
-/*       color: black; */
-/*       font-family: "Times New Roman", Times, serif; */
-/*       background-color: #F1F0EC; /\* #F8F6F3;  #F5F5F5; *\/ */
-/*       width: 800px;      */
-/*       margin-left:  35px;  */
-/*       margin-right: auto;  */
-/*       margin-top:   20px;  */
-/*       margin-bottom: auto;  */
-/* } */
-
-
-body {
-    font-family:  serif;
-    font-style:   normal;
-    font-weight:  500;
-    max-width:    800px;
-    margin-left:  auto;
-    margin-right: auto;
-    background-color: #F1F0EC;   /* #F8F6F3;  #F5F5F5; */
-    padding: 1em;
-    margin:  0 auto;
-    padding: 0.2em;
+/* simple Body */
+body{ font-size: 16px;
+      color: black;
+      font-family: "Times New Roman", Times, serif;
+      background-color: #F1F0EC; /* #F8F6F3;  #F5F5F5; */
+      width: 800px;
+      margin-left:  35px;
+      margin-right: auto;
+      margin-top:   20px;
+      margin-bottom: auto;
 }
+
 
 
 /* contacts table */
