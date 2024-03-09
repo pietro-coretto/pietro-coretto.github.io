@@ -1,18 +1,32 @@
 /* import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
 
-
 /*  simple Body */
-body{ font-size: 16px;
-      color: black;
-      font-family: "Times New Roman", Times, serif;
-      background-color: #F1F0EC; /* #F8F6F3;  #F5F5F5; */
-      width: 800px;     
-      margin-left:  35px; 
-      margin-right: auto; 
-      margin-top:   20px; 
-      margin-bottom: auto; 
+/* body{ font-size: 16px; */
+/*       color: black; */
+/*       font-family: "Times New Roman", Times, serif; */
+/*       background-color: #F1F0EC; /\* #F8F6F3;  #F5F5F5; *\/ */
+/*       width: 800px;      */
+/*       margin-left:  35px;  */
+/*       margin-right: auto;  */
+/*       margin-top:   20px;  */
+/*       margin-bottom: auto;  */
+/* } */
+
+
+body {
+    font-family:  serif;
+    font-style:   normal;
+    font-weight:  500;
+    max-width:    800px;
+    margin-left:  auto;
+    margin-right: auto;
+    background-color: #F1F0EC;   /* #F8F6F3;  #F5F5F5; */
+    padding: 1em;
+    margin:  0 auto;
+    padding: 0.2em;
 }
+
 
 /* contacts table */
 .contacts {
@@ -52,60 +66,60 @@ a:active { color: #C4262E; }
 
 
 /* headers */
-h1{
-  display: block;
-  font-size: 2em;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: bold;
-}
+/* h1{ */
+/*   display: block; */
+/*   font-size: 2em; */
+/*   margin-top: 0.67em; */
+/*   margin-bottom: 0.67em; */
+/*   margin-left: 0; */
+/*   margin-right: 0; */
+/*   font-weight: bold; */
+/* } */
 
 .h1Style{
   font-size: 2em;
   font-weight: bold;
 }
 
-h2{
-  display: block;
-  font-size: 1.5em;
-  margin-top: 0.83em;
-  margin-bottom: 0.83em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: bold;
-}
+/* h2{ */
+/*   display: block; */
+/*   font-size: 1.5em; */
+/*   margin-top: 0.83em; */
+/*   margin-bottom: 0.83em; */
+/*   margin-left: 0; */
+/*   margin-right: 0; */
+/*   font-weight: bold; */
+/* } */
 
 .h2Style{
   font-size: 1.5em;
   font-weight: bold;
 }
 
-h3{
-  display: block;
-  font-size: 1.17em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: bold;
-}
+/* h3{ */
+/*   display: block; */
+/*   font-size: 1.17em; */
+/*   margin-top: 1em; */
+/*   margin-bottom: 1em; */
+/*   margin-left: 0; */
+/*   margin-right: 0; */
+/*   font-weight: bold; */
+/* } */
 
 .h3Style{
   font-size: 1.17em;
   font-weight: bold;
 }
 
-h4{
-  display: block;
-  font-size: 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: bold;
-}
+/* h4{ */
+/*   display: block; */
+/*   font-size: 1em; */
+/*   margin-top: 1em; */
+/*   margin-bottom: 1em; */
+/*   margin-left: 0; */
+/*   margin-right: 0; */
+/*   font-weight: bold; */
+/* } */
 
 .h4Style{
   font-size: 1em;
