@@ -1,6 +1,32 @@
 /* import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
 
+
+
+/* Desktop styles (default) */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tablet styles */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 0 20px;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 0 10px;
+  }
+}
+
+
+
 /* simple Body */
 body{ font-size: 16px;
       color: black;

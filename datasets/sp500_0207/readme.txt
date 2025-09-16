@@ -9,7 +9,6 @@ Columns  are as follows
 
 Col 1:		calendar dates
 Col 2:		S&P500 prices
-Col 3:		calendar dates
 Col 3-102:	prices of a selection of stocks
 
 Stocks' code-name are given as  column labels.  There are calendar 
