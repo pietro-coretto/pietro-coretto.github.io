@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap'); */
 
 /* =========================
    Base layout (mobile-first)
@@ -8,8 +8,9 @@
 body {
   font-size: 16px;
   color: black;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto,
+               Helvetica, Arial, sans-serif;
   background-color: #F1F0EC;
   margin: 0;
   line-height: 1.55;
@@ -44,6 +45,13 @@ body {
   font-size: 1em;
   font-weight: 600;
 }
+
+/* Tabella contatti in font Monospazio */
+.contacts-section {
+  font-family: "Cousine", "Courier New", Courier, monospace !important;
+  font-size: 0.95em;
+}
+
 
 /* =========================
    Links (unchanged colors)
