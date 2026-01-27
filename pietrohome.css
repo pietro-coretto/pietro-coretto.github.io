@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
+
+/* =========================
+   Base layout (mobile-first)
+   ========================= */
+
+body {
+  font-size: 16px;
+  color: black;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  background-color: #F1F0EC;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* =========================
+   Typography
+   ========================= */
+
+.h1Style {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.h2Style {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.h3Style {
+  font-size: 1.17em;
+  font-weight: 600;
+}
+
+.h4Style {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+/* =========================
+   Links (unchanged colors)
+   ========================= */
+
+a:link { color: blue; text-decoration: none; }
+a:hover { color: #C4262E; }
+a:visited { color: blue; }
+a:visited:hover { color: #C4262E; }
+a:active { color: #C4262E; }
+
+/* =========================
+   Tables (responsive)
+   ========================= */
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  vertical-align: top;
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+}
+
+/* =========================
+   Lists
+   ========================= */
+
+ul, ol {
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+ul.blevel, ol.blevel {
+  margin: 0;
+  padding-left: 1em;
+}
+
+/* =========================
+   Preformatted text
+   ========================= */
+
+pre {
+  font-family: "Cousine", "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+  font-size: 0.95em;
+  white-space: pre-wrap;
+}
+
+/* =========================
+   Mobile refinements
+   ========================= */
+
+@media (max-width: 480px) {
+  body {
+    font-size: 17px;
+  }
+
+  .h1Style {
+    font-size: 1.6em;
+  }
+
+  .h3Style {
+    font-size: 1.05em;
+  }
+}
