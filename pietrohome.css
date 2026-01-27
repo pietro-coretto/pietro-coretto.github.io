@@ -7,9 +7,7 @@
 body {
   font-size: 16px;
   color: black;
-  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, */
-  /*              "Segoe UI", Roboto, */
-  /*              Helvetica, Arial, sans-serif; */
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, *Helvetica, Arial, sans-serif; */
   font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
   background-color: #F1F0EC; */
   margin: 0;
