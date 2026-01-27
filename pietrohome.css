@@ -1,6 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap'); */
-
+/* Version 27-01-2026 at 16:21:23 (CET) */
+			       
 /* =========================
    Base layout (mobile-first)
    ========================= */
@@ -8,10 +7,11 @@
 body {
   font-size: 16px;
   color: black;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Roboto,
-               Helvetica, Arial, sans-serif;
-  background-color: #F1F0EC;
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, */
+  /*              "Segoe UI", Roboto, */
+  /*              Helvetica, Arial, sans-serif; */
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  background-color: #F1F0EC; */
   margin: 0;
   line-height: 1.4;
 }
