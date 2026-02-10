@@ -3,28 +3,41 @@
 /* =========================
    Base layout (mobile-first)
    ========================= */
-/* Carica il font dai server di Google */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 
+
+/* Carica il font dai server di Google */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&family=Inter:wght@300;400;700;800&family=Montserrat:wght@400;500;700&display=swap');
 
 
 body {
   font-size: 16px;
   color: black;
   font-family: 'Inter', sans-serif;
-  background-color: #F1F0EC; */
+  font-weight: 300; /* Molto leggero */
+  background-color: #F1F0EC; /* Ho rimosso il commento errato qui */
   margin: 0;
   line-height: 1.4;
+}
+
+/* Prova 700 o 800 per un contrasto vero */
+b, strong {
+  font-weight: 600; 
+  color: #000; /* Assicura che sia nero pieno per risaltare sul fondo crema */
 }
 
 /* body { */
 /*   font-size: 16px; */
 /*   color: black; */
-/*   /\* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, *Helvetica, Arial, sans-serif; *\/ */
-/*   font-family: ui-serif, Georgia, "Times New Roman", Times, serif; */
+/*   font-family: 'Inter', sans-serif; */
+/*   font-weight: 300;  */
 /*   background-color: #F1F0EC; *\/ */
 /*   margin: 0; */
 /*   line-height: 1.4; */
+/* } */
+
+/* /\* Ensure <b>  and <strong> use  700 *\/ */
+/* b, strong { */
+/*   font-weight: 500; */
 /* } */
 
 .container {
@@ -37,32 +50,42 @@ body {
    Typography
    ========================= */
 
-.h1Style {
-  font-size: 2em;
-  font-weight: 700;
+:root {
+    --base-scale: 1.2; /* Cambia questo numero per scalare tutto */
 }
 
-.h2Style {
-  font-size: 1.5em;
-  font-weight: 600;
+h1, .h1Style { 
+    font-size: calc(2em * var(--base-scale)); 
+    font-family: 'EB Garamond', serif;
+    font-weight: 700;
 }
 
-.h3Style {
-  font-size: 1.17em;
-  font-weight: 600;
+h2, .h2Style { 
+    font-size: calc(1.5em * var(--base-scale)); 
+    font-family: 'EB Garamond', serif;
+    font-weight: 600; 
 }
 
-.h4Style {
-  font-size: 1em;
-  font-weight: 600;
+h3, .h3Style { 
+    font-size: calc(1em * var(--base-scale)); 
+    font-family: 'EB Garamond', serif;
+    font-weight: 600; 
 }
+
+h4, .h4Style { 
+    font-size: 1em; 
+    font-family: 'EB Garamond', serif;
+    font-weight: 600; 
+}
+
+
 
 /* Tabella contatti in font Monospazio */
 .contacts-section {
-  font-family: "Cousine", "Courier New", Courier, monospace !important;
-  font-size: 0.8em;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85em;
+  letter-spacing: 0.05em; /* I monospazio rendono meglio con un po' di respiro */
 }
-
 
 /* =========================
    Links (unchanged colors)
