@@ -1,91 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Homepage: Pietro Coretto</title>
+  <title>Pietro Coretto</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="pietrohome.css">
 </head>
 
 <body>
+
+<div class="nav-container">
+  <div class="nav">
+    <a href="#summary">Summary</a>
+    <a href="#research">Research</a>
+    <a href="#software">Software</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#misc">Misc</a>
+  </div>
+</div>
+
 <div class="container">
 
-  <div class="h1Style">Pietro Coretto</div>
-  <div class="h2Style">Professor of Statistics</div>
+  <section id="summary">
+    <div class="h1Style">Pietro Coretto</div>
+    <div class="h2Style">Professor of Statistics</div>
 
-  <table class="contacts-section">
-    <tr>
-      <td>Office</td>
-      <td>
-        Room U.FSTEC-03.P02.033 (<a href="mappa.html" target="_blank">map</a>)<br>
-        Dip. di Sc. Economiche e Statistiche<br>
-        Università degli Studi di Salerno<br>
-        Via Giovanni Paolo II, no. 132<br>
-        84084 – Fisciano (SA) – Italy
-      </td>
-    </tr>
-    <tr>
-      <td>Phone</td>
-      <td>+39 089 96 22 13</td>
-    </tr>
-    <tr>
-      <td>E-mail</td>
-      <td>pcoretto (at) unisa.it</td>
-    </tr>
-  </table>
+    <table class="contacts-section">
+      <tr>
+        <td>Office</td>
+        <td>
+          Room U.FSTEC-03.P02.033 (<a href="mappa.html" target="_blank">map</a>)<br>
+          Dip. di Sc. Economiche e Statistiche<br>
+          Università degli Studi di Salerno<br>
+          Via Giovanni Paolo II, no. 132<br>
+          84084 – Fisciano (SA) – Italy
+        </td>
+      </tr>
+      <tr>
+        <td>Phone</td>
+        <td>+39 089 96 22 13</td>
+      </tr>
+      <tr>
+        <td>E-mail</td>
+        <td>pcoretto (at) unisa.it</td>
+      </tr>
+    </table>
 
-  <b>Short Bio - </b>
-  I am full professor of Statistics at the
-  <a href="https://it.wikipedia.org/wiki/Universit%C3%A0_degli_Studi_di_Salerno" target="_blank">University of Salerno</a>
-  and a faculty member of the NSE graduate school of the
-  <a href="https://en.wikipedia.org/wiki/University_of_Naples_Federico_II" target="_blank">University of Naples "Federico II"</a>.
-  I received my Ph.D. in Statistics from
-  <a href="https://en.wikipedia.org/wiki/University_College_London" target="_blank">University College London (UCL, UK)</a>,
-  and my Master of Science (M.Sc.) at the
-  <a href="https://en.wikipedia.org/wiki/University_of_Pennsylvania" target="_blank">University of Pennsylvania (UPenn, USA)</a>.
-  I am broadly interested in the intersection of statistics and computational data science, with applications to machine learning and artificial intelligence.
-  Over the years, I have taught both undergraduate and graduate courses in inference, probability, computational and learning methods, and econometrics.
-  For more information, see the CV linked below.
+    <p>
+      <b>Short Bio - </b>
+      I am full professor of Statistics at the
+      <a href="https://it.wikipedia.org/wiki/Universit%C3%A0_degli_Studi_di_Salerno" target="_blank">University of Salerno</a>
+      and a faculty member of the NSE graduate school of the
+      <a href="https://en.wikipedia.org/wiki/University_of_Naples_Federico_II" target="_blank">University of Naples "Federico II"</a>.
+      I received my Ph.D. in Statistics from
+      <a href="https://en.wikipedia.org/wiki/University_College_London" target="_blank">University College London (UCL, UK)</a>,
+      and my Master of Science (M.Sc.) at the
+      <a href="https://en.wikipedia.org/wiki/University_of_Pennsylvania" target="_blank">University of Pennsylvania (UPenn, USA)</a>.
+      I am broadly interested in the intersection of statistics and computational data science, with applications to machine learning and artificial intelligence.
+      Over the years, I have taught both undergraduate and graduate courses in inference, probability, computational and learning methods, and econometrics.
+      For more information, see my <a href="pcoretto-cv.pdf">Curriculum Vitae</a>.
+    </p>
+  </section>
 
-  <hr>
+  <section id="research">
+    <div class="h3Style">Research &amp; Publications</div>
+    
+    <p>
+      Full list of my publications is available <a href="pcoretto-pubs.pdf" target="_blank">here (PDF)</a>. 
+      You can also find my preprints on <a href="https://arxiv.org/search/?searchtype=author&query=Coretto%2C+P" target="_blank">arXiv</a>.
+    </p>
 
-  <div class="h3Style">Academic info</div>
-  <ul>
-    <li><a href="pcoretto-cv.pdf">Curriculum Vitae</a></li>
-    <li><a href="research.html">Research &amp; Publications</a></li>
-    <li><a href="software.html">Software</a></li>
-  </ul>
+    <b>Current research projects:</b>
+    <ul>
+      <li>Selecting among several clustering solutions (with Luca Coraggio)</li>
+      <li>Robust covariance estimation with regularization for high-dimensional data (with C. Hennig)</li>
+      <li>Regularization of the EM-algorithm for Gaussian clustering</li>
+      <li>Setting the number of clusters for possibly contaminated data (with C. Hennig)</li>
+      <li>Robust methods for the analysis of toxicology data (with D. Greco, A. Serra et al.)</li>
+    </ul>
+  </section>
 
-  <hr>
+  <section id="software">
+    <div class="h3Style">Software</div>
+    
+    <div id="sw_otrimle">
+      <b>OTRIMLE: robust model-based clustering</b>
+      <img src="imgs/sw_otrimle.png" alt="OTRIMLE" class="software-img">
+      <p>OTRIMLE is an R package for robust cluster analysis allowing for outliers and noise. The data are modelled by a mixture of Gaussian distributions and a noise component. <a href="https://cran.r-project.org/package=otrimle" target="_blank">Download from CRAN</a>.</p>
+    </div>
 
-  <div class="h3Style">Teaching / Didattica</div>
-  <ul>
-    <li><a href="ricevimento-avvisi.html">Avvisi</a></li>
-    <li><a href="ricevimento-avvisi.html">Ricevimento Studenti</a></li>
-    <li>Corsi / Current Classes
-      <ul class="blevel">
-        <li><a href="syllabus-asl-1.pdf">Advanced Statistical Learning I</a> (Università di Salerno)</li>
-        <li><a href="syllabus-econometrics.pdf">Econometrics</a> (Università di Napoli "Federico II")</li>
-        <li><a href="syllabus-sl.pdf">Statistical Learning</a> (Università di Salerno)</li>
-        <li><a href="syllabus-avd.pdf">Analisi e Visualizzazione dei Dati</a> (Università di Salerno)</li>
-      </ul>
-    </li>
-  </ul>
+    <div id="sw_rsc">
+      <b>RSC: robust and sparse correlation matrix</b>
+      <img src="imgs/sw_rsc.png" alt="RSC" class="software-img">
+      <p>RSC computes an estimate of the correlation matrix resistant to noise and outliers, applying adaptive thresholding for sparsity. <a href="https://cran.r-project.org/web/packages/RSC/index.html" target="_blank">Download from CRAN</a>.</p>
+    </div>
 
-  <hr>
+    <div id="sw_hyqsar">
+      <b>hyQSAR: hybrid quantitative structure–activity relationship modelling</b>
+      <img src="imgs/sw_hyqsar.png" alt="hyQSAR" class="software-img">
+      <p>hyQSAR performs hybrid QSAR modelling by integrating structural properties and MOA information. <a href="https://github.com/angy89/hyQSAR" target="_blank">Download via GitHub</a>.</p>
+    </div>
 
-  <div class="h3Style">Miscellanea</div>
-  <ul>
-    <li><a href="audiophile.html">The Audiophile Corner</a></li>
-    <li><a href="soon.html">Music</a></li>
-    <li><a href="soon.html">DIY Projects</a></li>
-    <li><a href="soon.html">Non-scientific papers</a></li>
-  </ul>
+    <div id="sw_rcps">
+      <b>RCPS: robust clustering for patient subtyping</b>
+      <img src="imgs/sw_rcps.png" alt="RCPS" class="software-img">
+      <p>RCPS performs robust clustering for patient subtyping that guarantees optimal separation in terms of survival patterns. <a href="https://github.com/angy89/RobustClusteringPatientSubtyping" target="_blank">Download via GitHub</a>.</p>
+    </div>
+  </section>
+
+  <section id="teaching">
+    <div class="h3Style">Teaching / Didattica</div>
+    
+    <b>Current Classes / Corsi:</b>
+    <ul>
+      <li><a href="syllabus-asl-1.pdf">Advanced Statistical Learning I</a> (Salerno)</li>
+      <li><a href="syllabus-econometrics.pdf">Econometrics</a> (Napoli "Federico II")</li>
+      <li><a href="syllabus-sl.pdf">Statistical Learning</a> (Salerno)</li>
+      <li><a href="syllabus-avd.pdf">Analisi e Visualizzazione dei Dati</a> (Salerno)</li>
+    </ul>
+
+    <b>Ricevimento Studenti &amp; Avvisi:</b>
+    <p>
+      I ricevimenti si tengono presso il mio ufficio (stanza U.FSTEC-03.P02.033) previo appuntamento via email. 
+      Vedi il <a href="http://docenti.unisa.it/pietro.coretto" target="_blank">calendario ufficiale</a>.
+    </p>
+    <p>
+      Tutti gli avvisi didattici sono comunicati tramite la mailing-list 
+      <a href="https://groups.google.com/a/unisa.it/g/pcoretto-news-list" target="_blank">pcoretto-news</a>.
+    </p>
+  </section>
+
+  <section id="misc">
+    <div class="h3Style">Miscellanea</div>
+    <ul>
+      <li><a href="audiophile.html">The Audiophile Corner</a></li>
+      <li>Music (coming soon)</li>
+      <li>DIY Projects (coming soon)</li>
+      <li>Non-scientific papers (coming soon)</li>
+    </ul>
+  </section>
 
   <footer>
     <div>&copy; Pietro Coretto</div>
   </footer>
 
 </div>
+
 </body>
 </html>
