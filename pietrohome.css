@@ -1,14 +1,10 @@
-/* pietrohome.css - Version 2026-02-26-single-page */
+/* pietrohome.css - Version 2026-02-10-compact */
 /* Carica il font dai server di Google */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&family=Inter:wght@300;400;700;800&family=Montserrat:wght@400;500;700&display=swap');
 
 /* =========================
    Base styles
    ========================= */
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-size: 16px;
   color: black;
@@ -26,79 +22,37 @@ b, strong {
 
 .container {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 15px auto;
   padding: 15px;
-}
-
-/* =========================
-   Navigation
-   ========================= */
-.nav-container {
-  position: sticky;
-  top: 0;
-  background-color: #F1F0EC;
-  border-bottom: 1px solid #ccc;
-  z-index: 1000;
-  padding: 5px 0;
-}
-
-.nav {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0 15px;
-  font-family: 'EB Garamond', serif;
-  font-weight: 600;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.nav a {
-  color: blue;
-  text-decoration: none;
-  font-size: 1.1em;
-}
-
-.nav a:hover {
-  color: #C4262E;
-  text-decoration: underline;
 }
 
 /* =========================
    Typography
    ========================= */
 .h1Style {
-  font-size: 2.2em;
+  font-size: 2em;
   font-family: 'EB Garamond', serif;
   font-weight: 700;
-  margin-top: 0.3em;
   margin-bottom: 0.1em;
   line-height: 1.1;
 }
 
 .h2Style {
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-family: 'EB Garamond', serif;
   font-weight: 600;
   margin-top: 0;
-  margin-bottom: 1.2em;
+  margin-bottom: 0.8em;
   color: #333;
 }
 
 .h3Style {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-family: 'EB Garamond', serif;
   font-weight: 600;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  margin-top: 1.2em;
+  margin-bottom: 0.3em;
   color: #222;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 0.2em;
-}
-
-section {
-  padding-top: 10px;
-  margin-bottom: 30px;
 }
 
 /* =========================
@@ -149,15 +103,7 @@ ul.blevel {
 hr {
   border: none;
   border-top: 1px solid #ccc;
-  margin: 1.5em 0;
-}
-
-.software-img {
-  max-width: 80%;
-  height: auto;
-  margin: 15px 0;
-  display: block;
-  border: 1px solid #ddd;
+  margin: 1.2em 0;
 }
 
 /* =========================
