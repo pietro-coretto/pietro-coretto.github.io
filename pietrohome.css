@@ -8,8 +8,7 @@
 body {
   font-size: 16px;
   color: black;
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-family: 'Times New Roman', Times, serif;
   background-color: #F1F0EC;
   margin: 0;
   line-height: 1.4;
@@ -31,7 +30,7 @@ b, strong {
    ========================= */
 .h1Style {
   font-size: 2em;
-  font-family: 'EB Garamond', serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
   margin-bottom: 0.1em;
   line-height: 1.1;
@@ -39,20 +38,20 @@ b, strong {
 
 .h2Style {
   font-size: 1.3em;
-  font-family: 'EB Garamond', serif;
+  font-family: Times;
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 0.8em;
-  color: #333;
+  color: #000000;
 }
 
 .h3Style {
   font-size: 1.1em;
-  font-family: 'EB Garamond', serif;
+  font-family: Times;
   font-weight: 600;
   margin-top: 1.2em;
   margin-bottom: 0.3em;
-  color: #222;
+  color: #000000; 
 }
 
 /* =========================
