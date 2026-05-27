@@ -29,16 +29,44 @@
 
 <h1>Software</h1>
 <ul class="contents">
-<li><a href="#sw_otrimle">OTRIMLE: robust model-based clustering</a></li>
-<li><a href="#sw_rsc">RSC:  robust and sparse correlation matrix</a></li>
-<li><a href="#sw_hyqsar">hyQSAR: hybrid quantitative structure–activity relationship (QSAR) modelling</a></li>
-<li><a href="#sw_rcps">RCPS:  robust clustering for patient subtyping</a></li>
+  
+<li><a href="#sw_qcluster">QCLUSTER</a>: clustering model selection and validation via quadratic scoring</li>
+<li><a href="#sw_otrimle">OTRIMLE</a>: robust model-based clustering</li>
+<li><a href="#sw_rsc">RSC</a>:  robust and sparse correlation matrix</li>
+<li><a href="#sw_hyqsar">hyQSAR</a>: hybrid quantitative structure–activity relationship (QSAR) modelling</li>
+<li><a href="#sw_rcps">RCPS</a>:  robust clustering for patient subtyping</li>
 </ul>
-
 
 <br>
 <hr>
+
+
+
+
+
+<a name="sw_qcluster"></a>
+<h2 id="sw_qcluster">qcluster: clustering model selection and validation via quadratic scoring</h2>
+
+<div><img src="imgs/sw_qcluster.png" alt=""width=50% ></div>
+
+<p>qcluster is an R package that provides tools for tuning clustering models, methods, and algorithms by quadratic scoring with resampling.  The package combines method generators for k-means, PAM, Gaussian mixtures, and user-defined methods; bootstrap quadratic-score estimation, ranking, and selection; and direct Gaussian model-based clustering via EM with covariance regularization.  A typical workflow consists of defining a collection of candidate clustering methods, estimating bootstrap quadratic scores, and ranking or selecting the best method and number of clusters.</p>
+
+<p><a href="https://cran.r-project.org/package=qcluster">Download package from CRAN</a></p>
+
+<p><strong>References</strong></p>
+L. Coraggio and P. Coretto (2023). <strong>Selecting the number of clusters, clustering models, and algorithms. A unifying approach based on the quadratic discriminant score</strong>. <em>Journal of Multivariate Analysis</em>, Vol. 196(105181), pp. 1&#8211;20. <a href="https://doi.org/10.1016/j.jmva.2023.105181">DOI link</a>
+
+
+
+
 <br>
+<br>
+<hr>
+
+
+
+
+
 
 
 
@@ -49,14 +77,11 @@
 
 <p>OTRIMLE is an R package that performs robust cluster analysis allowing for outliers and noise that cannot be  fitted by any cluster. The data are modelled by a mixture of Gaussian distributions  and a noise component, which is an improper uniform distribution covering the whole  Euclidean space. Parameters are estimated by (pseudo) maximum likelihood. This is  fitted by a EM-type algorithm.</p>
 
-
-<p><a href="https://cran.r-project.org/package=otrimle" target="_blank"><b>Download package from CRAN</b></a></p>
-
+<p><a href="https://cran.r-project.org/package=otrimle" target="_blank">Download package from CRAN</a></p>
 
 <p>
 <b>References</b>
 <ul>
-
 <li>
 P. Coretto  and C. Hennig (2016).   <b>Robust improper maximum likelihood: tuning, computation, and a comparison with other methods for robust Gaussian clustering</b>.  <em>Journal of the American Statistical Association</em>, Vol. 111(516), pp. 1648-1659.  <a href="http://dx.doi.org/10.1080/01621459.2015.1100996"  target="_blank">DOI link (open access)</a>
 </li>
@@ -64,7 +89,6 @@ P. Coretto  and C. Hennig (2016).   <b>Robust improper maximum likelihood: tunin
 <li>
 P. Coretto and C. Hennig (2107).  <b>Consistency, breakdown robustness, and algorithms for robust improper maximum likelihood clustering</b>.  <em>Journal of Machine Learning Research</em>, Vol. 18(142), pp. 1-39.  <a href="http://jmlr.org/papers/v18/16-382.html"  target="_blank">Download (open access)</a>
 </li>
-
 </ul>
 </p>
 
@@ -74,28 +98,22 @@ P. Coretto and C. Hennig (2107).  <b>Consistency, breakdown robustness, and algo
 
 
 
-
-
-
-
-
-
-
+<br>
 <br>
 <hr>
-<br>
+
+
+
+
 <a name="sw_rsc"></a>
 <h2>RSC:  robust and sparse correlation matrix</h2>
 
 
 <div align="left"><img src="imgs/sw_rsc.png" alt="" width=60%></div>
 
-<p>
-RSC is an R package that computes an estimate of the correlation matrix that is resistant to large amount of noise/outliers.  Adaptive thresholding is applied to obtain a sparse estimate. The software is fairly scalable and can handle massive data sets.
-</p>
+<p>RSC is an R package that computes an estimate of the correlation matrix that is resistant to large amount of noise/outliers.  Adaptive thresholding is applied to obtain a sparse estimate. The software is fairly scalable and can handle massive data sets.</p>
 
-<p><a href="https://cran.r-project.org/web/packages/RSC/index.html" target="_blank"><b>Download package from CRAN</b></a></p>
-
+<p><a href="https://cran.r-project.org/web/packages/RSC/index.html" target="_blank">Download package from CRAN</a></p>
 
 
 <p>
@@ -116,10 +134,12 @@ A. Serra, P. Coretto, M. Fratello, and R. Tagliaferri (2018). <b>Robust and spar
 
 
 
-
+<br>
 <br>
 <hr>
-<br>
+
+
+
 <a name="sw_hyqsar"></a>
 <h2>hyQSAR: hybrid quantitative structure–activity relationship (QSAR) modelling </h2>
 
@@ -132,7 +152,8 @@ hyQSAR is an R package that can be used to perform hybrid QSAR modelling by inte
 
 
 <p>
-<a href="https://github.com/angy89/hyQSAR" target="_blank"><b>Download software (development  version) via GitHub</b></a> (also contains data used in the references given below)
+<a href="https://github.com/angy89/hyQSAR" target="_blank">Download software (development  version) via GitHub</a>
+(also contains data used in the references given below)
 </p>
 
 
@@ -150,10 +171,17 @@ A. Serra, S. Önlü, P. Coretto, and D. Greco (2019). <b>An integrated quantitat
 
 
 
-
+<br>
 <br>
 <hr>
-<br>
+
+
+
+
+
+
+
+
 <a name="sw_rcps"></a>
 
 <h2>RCPS:  robust clustering for patient subtyping</h2>
@@ -167,7 +195,8 @@ RCPS is an R library that performs robust clustering for patient subtyping that 
 
 
 <p>
-<a href="https://github.com/angy89/RobustClusteringPatientSubtyping" target="_blank"><b>Download software (development  version) via GitHub</b></a> (also contains data used in the references given below)
+<a href="https://github.com/angy89/RobustClusteringPatientSubtyping" target="_blank">Download software (development  version) via GitHub</a>
+(also contains data used in the references given below)
 </p>
 
 
