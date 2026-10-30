@@ -33,6 +33,7 @@
 <li><a href="#sw_qcluster">QCLUSTER</a>: clustering model selection and validation via quadratic scoring</li>
 <li><a href="#sw_otrimle">OTRIMLE</a>: robust model-based clustering</li>
 <li><a href="#sw_rsc">RSC</a>:  robust and sparse correlation matrix</li>
+<li><a href="#sw_leanmatstat">lean-matstat-case-studies</a>: five problems in mathematical statistics formalized in Lean 4</li>
 <li><a href="#sw_hyqsar">hyQSAR</a>: hybrid quantitative structure–activity relationship (QSAR) modelling</li>
 <li><a href="#sw_rcps">RCPS</a>:  robust clustering for patient subtyping</li>
 </ul>
@@ -130,7 +131,32 @@ A. Serra, P. Coretto, M. Fratello, and R. Tagliaferri (2018). <b>Robust and spar
 
 
 
+<br>
+<br>
+<hr>
 
+
+
+
+<a name="sw_leanmatstat"></a>
+<h2>lean-matstat-case-studies: five problems in mathematical statistics formalized in Lean 4</h2>
+
+<div align="left"><img src="imgs/sw_leanmatstat.svg" alt="" width=60%></div>
+
+<p>
+lean-matstat-case-studies is a Lean 4 / Mathlib development that formalizes five results of mathematical statistics: consistency of the maximum likelihood estimator, domination of the score, asymptotic normality, Hadamard differentiability and the delta method, and an oracle inequality for the lasso. The whole library builds with no admitted step, and every headline theorem depends only on Lean's standard axioms. Structured annotations in the sources record each assumption that the informal textbook argument uses without stating, where the cited source omits it, and how the formal statement handles it. The repository is a self-contained, reproducible snapshot pinned to a fixed Mathlib revision, and its sources are written to be readable without prior exposure to Lean.
+</p>
+
+<p>
+<a href="https://github.com/pietro-coretto/lean-matstat-case-studies" target="_blank">Lean code on GitHub</a>
+</p>
+
+<p>
+<b>References</b>
+<br><br>
+
+P. Coretto (2026). <b>Statistical Theory in the Age of Machine-Assisted Mathematics: When AI Writes the Proofs and Machines Check Them, Who Reads the Hypotheses?</b> Preprint. <a href="https://arxiv.org/abs/2609.04481v1" target="_blank">arXiv:2609.04481</a>
+</p>
 
 
 
